@@ -9,8 +9,6 @@
 
 .main {
   &__container {
-    padding: 4rem 0 0 0;
-    background-color: aqua;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -20,9 +18,9 @@
   }
 
   &__grid {
-    background-color: aquamarine;
-    width: 90%;
+    // background-color: rgba(127, 255, 212, 0.329);
+    width: 85%;
     height: 100%;
-
+    
   }
 }
