@@ -1,5 +1,5 @@
-# Teste Blog Novalar
-- <a href=https://zdeep10.github.io/TestBlogNovalar/>Visualizar Projeto</a>
+# Teste Coopers
+- <a href=#>Visualizar Projeto</a>
   Projeto do tipo Clone UI. Desenvolvido durante um processo seletivo.
   
 # Processo de desenvolvimento

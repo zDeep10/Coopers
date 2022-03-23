@@ -1,0 +1,78 @@
+@use "../../styles/colors";
+@use "../../styles/typography";
+
+.article {
+  &__container {
+    background-color: colors.$verdeClaro;
+    border-radius: 15px;
+    padding: 8rem 0 0 8rem;
+    height: 520px;
+    width: 1080px;
+    margin: 5rem auto;
+
+    h2 {
+      color: colors.$branco;
+      font-size: 4.8rem;
+      font-weight: 700;
+    }
+  }
+
+  &__cardContainer {
+    display: flex;
+  }
+
+  &__card {
+    margin-right: 2rem;
+    margin-top: 3rem;
+    width: min-content;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 6px 5px 20px #66666679;
+  }
+
+  &__img {
+    position: relative;
+
+    img {
+      display: block;
+    }
+
+    .radius {
+      border-radius: 15px 15px 0 0;
+    }
+
+    .position {
+      left: 290px;
+      bottom: -25px;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+    }
+  }
+
+  &__info {
+    padding: 2.5rem;
+    div {
+      color: #9499b3;
+      font-size: 1.6rem;
+      border-radius: 20px;
+      width: fit-content;
+      padding: 5px 10px;
+      border: 1px solid #9499b3;
+      margin-bottom: 1.6rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 6.8rem;
+      font-weight: 500;
+    }
+
+    a {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: colors.$verdeClaro;
+      text-decoration: none;
+    }
+  }
+}
