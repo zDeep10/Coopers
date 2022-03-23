@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Get FTP credentials",
+    "complete": true
+  },
+  {
+    "name": "Home Page Design ",
+    "complete": false
+  },
+  {
+    "name": "E-mail John about the deadline",
+    "complete": false
+  },
+  {
+    "name": "Create a Google Drive folder",
+    "complete": false
+  },
+  {
+    "name": "Send a gift to the client",
+    "complete": false
+  }
+]

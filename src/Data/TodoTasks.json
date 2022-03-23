@@ -1,0 +1,34 @@
+[
+  {
+    "name": "this is a new task",
+    "complete": true
+  },
+  {
+    "name": "Develop the To-do list page",
+    "complete": false
+  },
+  {
+    "name": "Create the drag-and-drop function",
+    "complete": false
+  },
+  {
+    "name": "Add new tasks",
+    "complete": false
+  },
+  {
+    "name": "Delete itens",
+    "complete": false
+  },
+  {
+    "name": "Erase all",
+    "complete": false
+  },
+  {
+    "name": "Checked item goes to Done list",
+    "complete": false
+  },
+  {
+    "name": "This item label may be edited",
+    "complete": false
+  }
+]

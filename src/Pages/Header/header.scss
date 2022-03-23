@@ -1,35 +1,70 @@
 @use "../../styles/colors";
 @use "../../styles/typography";
 
-header {
-  margin-top: 6rem;
-  height: 734px;
-  // background-color:aqua ;
-}
-
-.nav__container {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: red;
-  margin-bottom: 6rem;
- 
-  button {
-    background-color: colors.$preto;
-    color: colors.$branco;
-    height: 40px;
-    width: 120px;
-    border: none;
-    font-family: typography.$poppinsFont;
-    font-weight: 600;
-    cursor: pointer;
-  }
-}
-
 .header {
-  &__flex {
+  &__container {
+    margin-top: 6rem;
+  }
+
+  // Nav
+  &__nav {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    button {
+      background-color: colors.$preto;
+      color: colors.$branco;
+      height: 40px;
+      width: 120px;
+      border: none;
+      font-family: typography.$poppinsFont;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  // First Block
+  &__flex {
+    margin-top: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    h1 {
+      font-size: 8rem;
+      font-weight: 700;
+      line-height: 6.4rem;
+    }
+
+    p {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .dayle {
+      color: colors.$verdeClaro;
+      font-size: 6rem;
+      margin-bottom: 56px;
+      font-weight: lighter;
+    }
+
+    .margin {
+      margin-bottom: 44px;
+    }
+
+    button {
+      background-color: colors.$verdeClaro;
+      width: 300px;
+      height: 64px;
+      color: colors.$branco;
+      font-size: 2.5rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
   }
 }

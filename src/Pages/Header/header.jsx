@@ -5,21 +5,27 @@ import sala from "../../Assets/img/02.png";
 const Header = () => {
   return (
     <header className="header__container">
-      <nav className="nav__container">
+      
+      {/* Nav */}
+      <nav className="header__nav">
         <img src={logo} alt="Logo Coopers" />
         <button>Entrar</button>
       </nav>
+
+      {/* First Block */}
       <div className="header__flex">
         <div className="header__title">
           <h1>Organize</h1>
-          <p>your daily jobs</p>
+          <p className="dayle">your daily jobs</p>
 
-          <p>The only way to get things done</p>
+          <p className="margin">The only way to get things done</p>
 
           <button>Go to TO-do list</button>
         </div>
+
+        {/* Second Block */}
         <div className="header__sala">
-          <img src={sala} alt="" />
+          <img src={sala} alt="Imagem Sala" />
         </div>
       </div>
     </header>

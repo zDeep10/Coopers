@@ -26,7 +26,7 @@
 
 [  ] Tornar ela operacional com drag-and-drop, eclusão, adição, etc.;
 
-[  ] Utilizar React e Node.js;
+[ x ] Utilizar React e Node.js;
 
 [  ] Trabalho adicional: fazer um login/senha para acessar a página (acesso com credenciais);
 
@@ -62,14 +62,14 @@
  
 # Layout
 
-[  ] Header
-    [  ]  Barra de navegação
+[ x ] Header
+    [ x ]  Barra de navegação
     [  ]  Banner
-    [  ]  Botão (Go to To-do list)
+    [ x ]  Botão (Go to To-do list)
 
-[  ] Main section
-    [  ] Titulo da sessão
-    [  ] Blocos To-do e Done
+[ x ] Main section
+    [ x ] Titulo da sessão
+    [ x ] Blocos To-do e Done
 
 [  ] Article
     [  ] Fundo verde

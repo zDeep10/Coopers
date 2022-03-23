@@ -1,0 +1,48 @@
+@use "../../styles/colors";
+@use "../../styles/typography";
+
+.section {
+  &__container {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .line {
+      background-color: colors.$verdeClaro;
+      width: 297px;
+      height: 4px;
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    padding: 4rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__description {
+    text-align: center;
+    max-width: 600px;
+    margin-top: 34px;
+    color: colors.$branco;
+    font-size: 2.5rem;
+  }
+
+  &__title {
+    font-size: 6rem;
+    color: colors.$branco;
+    font-family: typography.$poppinsFont;
+    line-height: 6rem;
+  }
+
+  &__cards {
+    width: 80%;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
