@@ -2,14 +2,12 @@ import success from "../../../../Assets/icons/icon_success.png";
 import success2 from "../../../../Assets/icons/icon_success2.png";
 
 const Taks = ({ tasks, name }) => {
-  console.log(tasks);
-
   const checkBoxType = (data) => {
     // Type of checkBox
     if (name == "Done") {
-      return <img src={success2} alt="Sucess Icon" loading="lazy"/>;
+      return <img src={success2} alt="Sucess Icon" loading="lazy" />;
     } else {
-      return <img src={success} alt="Sucess Icon"loading="lazy" />;
+      return <img src={success} alt="Sucess Icon" loading="lazy" />;
     }
   };
   return (

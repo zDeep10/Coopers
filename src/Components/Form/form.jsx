@@ -28,10 +28,10 @@ const Form = () => {
         {/* Email and Telephone input */}
         <div className="form__emailTelephone">
           {/* Email */}
-          <divc className="size">
+          <div className="size">
             <label>Email*</label>
             <input type="email" required placeholder="example@example.com" />
-          </divc>
+          </div>
 
           {/* Telephone */}
           <div className="size">

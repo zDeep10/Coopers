@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+html{
+  background-color: rgb(247, 247, 247);
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }

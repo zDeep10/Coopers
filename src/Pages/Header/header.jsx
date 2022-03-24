@@ -2,8 +2,15 @@ import "./header.scss";
 import logo from "../../Assets/img/Logo.png";
 import sala from "../../Assets/img/02.png";
 import arrow from "../../Assets/icons/icon-scroll.png";
+import Modal from "../../Components/Modal/modal";
+import { useState } from "react";
+import { useContext } from "react";
+import { userContext } from "../../Store/userContext";
 
 const Header = () => {
+  const { authentication } = useContext(userContext);
+
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="main__grid">
       <div className="main__grid">
@@ -11,8 +18,18 @@ const Header = () => {
           {/* Nav */}
           <nav className="header__nav">
             <img src={logo} alt="Logo Coopers" />
-            <button>Entrar</button>
+
+            {authentication ? (
+              <h2 className="authentication">
+                Welcome <span>{authentication}</span>
+              </h2>
+            ) : (
+              <button onClick={() => setShowModal(true)}>Sign in</button>
+            )}
           </nav>
+
+          {/* Modal */}
+          <Modal showModal={showModal} setShowModal={setShowModal} />
 
           {/* First Block */}
           <div className="header__flex">

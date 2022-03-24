@@ -7,17 +7,32 @@
     margin-top: 6rem;
     width: 90%;
     position: relative;
-    
-    .center{
+
+    .center {
       top: 100px;
       position: relative;
       width: 20px;
       margin: 0 auto;
     }
 
-    .arrowIcon{
+    .arrowIcon {
       width: 100%;
       height: auto;
+    }
+
+    .authentication {
+      margin-right: 5rem;
+      font-size: 2rem;
+      span {
+        margin-left: 0.5rem;
+        color: colors.$verdeClaro;
+      }
+    }
+  }
+
+  &__sala {
+    img {
+      filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.541));
     }
   }
 
