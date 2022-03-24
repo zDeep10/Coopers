@@ -1,13 +1,12 @@
-import { useState } from "react";
 import Cards from "./Card/card";
 import "./section.scss";
+import graphism from "../../Assets/img/grafismos.png";
 
 const MainSection = () => {
-
   return (
     <section className="section__container">
       {/* BackGround */}
-      <div className="section__bg" onClick={() => setDoneTasks(data)}>
+      <div className="section__bg">
         <h2 className="section__title">To-do List</h2>
         <div className="line"></div>
         <p className="section__description">
@@ -15,6 +14,8 @@ const MainSection = () => {
           what's new.
         </p>
       </div>
+
+      <img className="graphismIMG" src={graphism} alt="Grafismo" />
 
       {/* Todo Cards  */}
       <div className="section__cards">

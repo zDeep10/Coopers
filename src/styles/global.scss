@@ -9,18 +9,23 @@
 
 .main {
   &__container {
-    width: 100%;
+    margin: 0 auto;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    position: relative;
+    .headerBG {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
   }
 
   &__grid {
-    // background-color: rgba(127, 255, 212, 0.329);
-    width: 85%;
-    height: 100%;
-    
+  max-width: 1600px;
+    margin: 0 auto;
+
+    // @media (max-width: 1024px) {
+    //   width: 50%;
+    // }
   }
 }

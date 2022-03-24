@@ -2,26 +2,41 @@
 @use "../../styles/typography";
 
 .section {
+  // BackGround and title
   &__container {
-    margin-top: 10rem;
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    margin-bottom: 10rem;
 
     .line {
       background-color: colors.$verdeClaro;
       width: 297px;
       height: 4px;
     }
+
+    .graphismIMG{
+      position: absolute;
+      left: 0;
+      top: 530px;
+      z-index: -1;
+    }
   }
 
   &__bg {
     width: 100%;
-    padding: 4rem;
-    background-color: black;
+    height: 480px;
+    background-image: url("../../Assets/img/Section-blackBG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    z-index: -2;
   }
 
   &__description {
@@ -39,10 +54,11 @@
     line-height: 6rem;
   }
 
+  // Todo Cards
   &__cards {
     width: 80%;
     margin-top: 5rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 }

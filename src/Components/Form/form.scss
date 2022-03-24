@@ -1,0 +1,111 @@
+@use "../../styles/colors";
+@use "../../styles/typography";
+
+.form {
+  &__container {
+    width: 100%;
+    max-width: 700px;
+    height: 721px;
+    position: relative;
+    padding: 8.7rem 6rem 6rem 6rem;
+    margin: 30rem auto  8rem;
+    box-shadow: 1px 2px 30px rgba(128, 128, 128, 0.425);
+
+    // Header
+    .greenDetail {
+      width: 166px;
+      height: 23px;
+      background-color: colors.$verdeClaro;
+      position: absolute;
+      top: -12px;
+      left: 200px;
+    }
+
+    .position {
+      position: absolute;
+      top: -100px;
+      left: 270px;
+    }
+
+    button {
+      width: 100%;
+      background-color: colors.$verdeClaro;
+      color: colors.$branco;
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: 0.2rem;
+      padding: 1.6rem 0;
+      border-radius: 5px;
+      border: none;
+    }
+  }
+
+  // Icon and Title
+  &__getInTouch {
+    display: flex;
+
+    h3 {
+      margin-left: 2.4rem;
+      font-size: 2.4rem;
+      font-weight: lighter;
+      max-width: 100px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  // Form
+  &__block {
+    margin-top: 4rem;
+
+    label {
+      font-size: 1.6rem;
+      font-weight: 400;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 1.5rem 0 1.5rem 1.6rem;
+      border-radius: 5px;
+      outline: none;
+      border: 0.5px solid #06152b;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #9a9a9a;
+      font-size: 1.4rem;
+      font-family: typography.$montSerrantFont;
+    }
+  }
+
+  &__emailTelephone {
+    display: flex;
+    justify-content: space-between;
+
+    .size {
+      width: 48%;
+    }
+  }
+
+  &__name,
+  &__emailTelephone {
+    margin-bottom: 2.4rem;
+  }
+
+  &__message {
+    margin-bottom: 4rem;
+
+    textarea {
+      width: 100%;
+      padding: 1.5rem;
+      height: 150px;
+      outline: none;
+      border: 0.5px solid #06152b;
+    }
+  }
+}
