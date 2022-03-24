@@ -8,7 +8,7 @@
     height: 721px;
     position: relative;
     padding: 8.7rem 6rem 6rem 6rem;
-    margin: 30rem auto  8rem;
+    margin: 30rem auto 8rem;
     box-shadow: 1px 2px 30px rgba(128, 128, 128, 0.425);
 
     // Header
@@ -67,6 +67,7 @@
       margin-bottom: 0.8rem;
     }
 
+    // Inputs
     input {
       width: 100%;
       padding: 1.5rem 0 1.5rem 1.6rem;
@@ -82,7 +83,7 @@
       font-family: typography.$montSerrantFont;
     }
   }
-
+  // Spaces
   &__emailTelephone {
     display: flex;
     justify-content: space-between;
@@ -99,7 +100,7 @@
 
   &__message {
     margin-bottom: 4rem;
-
+    // Message camp
     textarea {
       width: 100%;
       padding: 1.5rem;

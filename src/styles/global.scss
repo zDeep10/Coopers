@@ -1,6 +1,7 @@
 @use "colors";
 @use "typography";
 
+// Global configuration
 * {
   padding: 0;
   margin: 0;
@@ -19,13 +20,8 @@
       z-index: -1;
     }
   }
-
   &__grid {
-  max-width: 1600px;
+    max-width: 1600px;
     margin: 0 auto;
-
-    // @media (max-width: 1024px) {
-    //   width: 50%;
-    // }
   }
 }
