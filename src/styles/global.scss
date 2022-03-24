@@ -8,6 +8,15 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: colors.$verdeClaro;
+}
+
 .main {
   &__container {
     margin: 0 auto;

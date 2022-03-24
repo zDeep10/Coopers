@@ -2,13 +2,14 @@
 @use "../../styles/typography";
 
 .article {
-  // Card Container
+  // Card
   &__container {
     background-color: colors.$verdeClaro;
     border-radius: 15px;
-    padding: 8rem 0 0 8rem;
+    padding: 8rem;
     height: 520px;
-    width: 1080px;
+    width: 100%;
+    max-width: 1080px;
     margin: 0 auto;
 
     h2 {
@@ -20,6 +21,7 @@
 
   &__cardContainer {
     display: flex;
+    overflow: hidden;
   }
 
   &__card {

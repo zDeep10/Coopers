@@ -1,6 +1,7 @@
 import "./header.scss";
 import logo from "../../Assets/img/Logo.png";
 import sala from "../../Assets/img/02.png";
+import arrow from "../../Assets/icons/icon-scroll.png";
 
 const Header = () => {
   return (
@@ -28,6 +29,10 @@ const Header = () => {
             <div className="header__sala">
               <img src={sala} alt="Imagem Sala" />
             </div>
+          </div>
+
+          <div className="center">
+            <img className="arrowIcon" src={arrow} alt="Arrow Icon" />
           </div>
         </header>
       </div>

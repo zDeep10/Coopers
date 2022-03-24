@@ -15,7 +15,7 @@ const MainSection = () => {
         </p>
       </div>
 
-      <img className="graphismIMG" src={graphism} alt="Grafismo" />
+      <img className="graphismIMG" src={graphism} alt="Grafismo" loading="lazy" />
 
       {/* Todo Cards  */}
       <div className="section__cards">

@@ -7,11 +7,11 @@ const Form = () => {
     <div className="form__container">
       {/* Header */}
       <div className="greenDetail"></div>
-      <img className="position" src={avatar} alt="" />
+      <img className="position" src={avatar} alt="Imagem avatar" loading="lazy" />
 
       {/* Icon and Title */}
       <div className="form__getInTouch">
-        <img src={icoEmail} alt="" />
+        <img src={icoEmail} alt="Email Icon" loading="lazy" />
         <h3>
           Get in <span>Thouch</span>
         </h3>

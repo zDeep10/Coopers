@@ -7,9 +7,9 @@ const Taks = ({ tasks, name }) => {
   const checkBoxType = (data) => {
     // Type of checkBox
     if (name == "Done") {
-      return <img src={success2} alt="Sucess Icon" />;
+      return <img src={success2} alt="Sucess Icon" loading="lazy"/>;
     } else {
-      return <img src={success} alt="Sucess Icon" />;
+      return <img src={success} alt="Sucess Icon"loading="lazy" />;
     }
   };
   return (
@@ -29,6 +29,8 @@ const Taks = ({ tasks, name }) => {
           {tasks.name}
         </div>
       </div>
+
+      <picture></picture>
 
       {/* Delete */}
       <div className="card__delete">delete</div>

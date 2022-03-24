@@ -6,6 +6,19 @@
     margin: 0 auto;
     margin-top: 6rem;
     width: 90%;
+    position: relative;
+    
+    .center{
+      top: 100px;
+      position: relative;
+      width: 20px;
+      margin: 0 auto;
+    }
+
+    .arrowIcon{
+      width: 100%;
+      height: auto;
+    }
   }
 
   // Nav

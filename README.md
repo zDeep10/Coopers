@@ -50,15 +50,15 @@ E por ultimo, apos organizar e separar a aplicação em partes, eu dou incinio a
 
 [ x ] Selecionar paleta de cores
 
-[ ] Manter o codigo organizado e comentado
+[ x ] Manter o codigo organizado e comentado
 
 [ ] Construir estrutura em JSX com componentes funcionais
 
-[ ] Estilização com Css(scss)
+[ x ] Estilização com Css(scss)
 
 [ ] Consumo com Axios
 
-[ ] Bloco de cadastro
+[ x ] Bloco de cadastro
 
 [ ] Validar campos
 
@@ -70,24 +70,24 @@ E por ultimo, apos organizar e separar a aplicação em partes, eu dou incinio a
 
 [ x ] Header
 [ x ] Barra de navegação
-[ ] Banner
+[ x ] Banner
 [ x ] Botão (Go to To-do list)
 
 [ x ] Main section
 [ x ] Titulo da sessão
 [ x ] Blocos To-do e Done
 
-[ ] Article
-[ ] Fundo verde
-[ ] Cartas
+[ x ] Article
+[ x ] Fundo verde
+[ x ] Cartas
 
-[ ] Sessão
-[ ] Avatar
-[ ] Formulario
+[ x ] Sessão
+[ x ] Avatar
+[ x ] Formulario
 
-[ ] Footer
-[ ] Fundo escuro
-[ ] Email ajuda
+[ x ] Footer
+[ x ] Fundo escuro
+[ x ] Email ajuda
 
 # Back-End
 

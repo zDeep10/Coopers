@@ -7,7 +7,7 @@ const Footer = () => {
       <h3>Need help?</h3>
       <p>coopers@coopers.pro</p>
       <p className="size">© 2021 Coopers. All rights reserved.</p>
-      <img src={greenBG} alt="Green detail" />
+      <img src={greenBG} alt="Green detail" loading="lazy"/>
     </footer>
   );
 };
