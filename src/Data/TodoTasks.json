@@ -1,34 +1,47 @@
 [
   {
+    "id": 1,
     "name": "this is a new task",
     "complete": true
   },
   {
+    "id": 2,
     "name": "Develop the To-do list page",
     "complete": false
   },
   {
+    "id": 3,
     "name": "Create the drag-and-drop function",
     "complete": false
   },
   {
+    "id": 4,
     "name": "Add new tasks",
     "complete": false
   },
   {
+    "id": 5,
     "name": "Delete itens",
     "complete": false
   },
   {
+    "id": 6,
     "name": "Erase all",
     "complete": false
   },
   {
+    "id": 7,
     "name": "Checked item goes to Done list",
     "complete": false
   },
   {
+    "id": 8,
     "name": "This item label may be edited",
+    "complete": false
+  },
+  {
+    "id": 9,
+    "name": "Editing an item...",
     "complete": false
   }
 ]

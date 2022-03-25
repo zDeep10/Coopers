@@ -22,19 +22,16 @@ E por ultimo, apos organizar e separar a aplicação em partes, eu dou incinio a
 
 [ ] Desenvolver o Layout (Responsivo)
 
-[ ] Preferencialmente desenvolver o CSS com a metodologia Mobile First;
-
 [ ] Fazer os CRUDs funcionais de uma to-do List;
 
 [ ] Tornar ela operacional com drag-and-drop, eclusão, adição, etc.;
 
 [ x ] Utilizar React e Node.js;
 
-[ ] Trabalho adicional: fazer um login/senha para acessar a página (acesso com credenciais);
+[ x ] Trabalho adicional: fazer um login/senha para acessar a página (acesso com credenciais);
 
 [ ] Ao final do teste, me enviar por e-mail hospedado em um servidor + texto descritivo de como
-
-[ ] foi para você fazer este desafio + acesso ao repositório de arquivos.
+    foi para você fazer este desafio + acesso ao repositório de arquivos.
 
 [ ] Hospedar aplicação no HEROKU
 
@@ -52,13 +49,13 @@ E por ultimo, apos organizar e separar a aplicação em partes, eu dou incinio a
 
 [ x ] Manter o codigo organizado e comentado
 
-[ ] Construir estrutura em JSX com componentes funcionais
+[ x ] Construir estrutura em JSX com componentes funcionais
 
 [ x ] Estilização com Css(scss)
 
 [ ] Consumo com Axios
 
-[ x ] Bloco de cadastro
+[ x ] Modal de cadastro
 
 [ ] Validar campos
 

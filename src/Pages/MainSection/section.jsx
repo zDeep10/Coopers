@@ -1,8 +1,15 @@
 import Cards from "./Card/card";
 import "./section.scss";
 import graphism from "../../Assets/img/grafismos.png";
+import { useState, useEffect } from "react";
 
 const MainSection = () => {
+  const [winReady, setWinReady] = useState(false);
+
+  useEffect(() => {
+    setWinReady(true);
+  }, []);
+
   return (
     <section className="section__container">
       {/* BackGround */}
@@ -15,12 +22,19 @@ const MainSection = () => {
         </p>
       </div>
 
-      <img className="graphismIMG" src={graphism} alt="Grafismo" loading="lazy" />
+      <img
+        className="graphismIMG"
+        src={graphism}
+        alt="Grafismo"
+        loading="lazy"
+      />
 
       {/* Todo Cards  */}
+
       <div className="section__cards">
-        <Cards name={"To-do"} />
-        <Cards name={"Done"} />
+        {winReady ? <Cards name={"To-do"} /> : null}
+
+        {/* <Cards name={"Done"} /> */}
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import "./button.scss";
 const Button = () => {
 
     return(
-        <button className="button__container">erase all</button>
+        <button className="button__container">Click or Grab to enrase</button>
     )
 };
 
