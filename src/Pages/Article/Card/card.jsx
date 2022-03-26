@@ -3,12 +3,15 @@ import cooIcon from "../../../Assets/icons/icon-coopers.png";
 const Card = ({ item }) => {
   const imgPath = "./src/img" + item.img;
 
-  console.log(imgPath)
-
   return (
     <div className="article__card">
       <div className="article__img">
-        <img className="radius" src={imgPath} alt="Daily jobs" loading="lazy" />
+        <img
+          className="radius"
+          src="https://images.unsplash.com/photo-1648315156557-444d572b246b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+          alt="Daily jobs"
+          loading="lazy"
+        />
         <img
           className="position"
           src={cooIcon}
