@@ -8,9 +8,26 @@ import { useContext } from "react";
 import { userContext } from "../../Store/userContext";
 
 const Header = () => {
-  const { authentication } = useContext(userContext);
+  // Turn page State
+  const { setOnPage, authentication } = useContext(userContext);
 
+  // Modal State
   const [showModal, setShowModal] = useState(false);
+
+  // Error State
+  const [errorMessage, setErrorMessage] = useState(false);
+
+  // Go to todo list Button
+  const pageCall = () => {
+    if (authentication) {
+      setOnPage(true);
+    }
+
+    if (authentication == false) {
+      setErrorMessage(true);
+    }
+  };
+
   return (
     <div className="main__grid">
       <div className="main__grid">
@@ -29,7 +46,7 @@ const Header = () => {
           </nav>
 
           {/* Modal */}
-          <Modal showModal={showModal} setShowModal={setShowModal} />
+          <Modal showModal={showModal} setShowModal={setShowModal} setErrorMessage={setErrorMessage} />
 
           {/* First Block */}
           <div className="header__flex">
@@ -39,7 +56,8 @@ const Header = () => {
 
               <p className="margin">The only way to get things done</p>
 
-              <button>Go to To-do list</button>
+              <button onClick={pageCall}>Go to To-do list</button>
+              {errorMessage && <span className="errorMessage">You must be logged</span>}
             </div>
 
             {/* Second Block */}

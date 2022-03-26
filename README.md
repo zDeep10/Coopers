@@ -24,7 +24,7 @@ Entre cada funcionalidade que precisa ser implementada, eu a divido em pequenas 
 
 [ ] Desenvolver o Layout (Responsivo)
 
-[ ] Fazer os CRUDs funcionais de uma to-do List;
+[ x ] Fazer os CRUDs funcionais de uma to-do List;
 
 [ ] Tornar ela operacional com drag-and-drop, eclusão, adição, etc.;
 
@@ -61,7 +61,7 @@ foi para você fazer este desafio + acesso ao repositório de arquivos.
 
 [ ] Criar Slides
 
-[ ] Deixar funcional cards de tarefas
+[ x ] Deixar funcional cards de tarefas
 
 # Layout
 

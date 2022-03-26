@@ -5,7 +5,7 @@ import userSchema from "../../Validation/modalValidation";
 import { useState, useContext } from "react";
 import { userContext } from "../../Store/userContext";
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal, setErrorMessage }) => {
   // States for handling erros
   const [passwordError, setPasswordError] = useState(null);
   const [userError, setUserError] = useState(null);
@@ -25,6 +25,7 @@ const Modal = ({ showModal, setShowModal }) => {
       setUserError(null);
       setPasswordError(null);
       setShowModal(false);
+      setErrorMessage(false);
 
       setAuthentication(isValid.user);
     } catch (err) {
@@ -94,7 +95,7 @@ const Modal = ({ showModal, setShowModal }) => {
               {userError && <span className="error">{userError}</span>}
 
               <label className="reSize">Password:</label>
-              <input name="password" type="text" />
+              <input type="password" name="password" />
               {passwordError && <span className="error">{passwordError}</span>}
 
               <button>Sign in</button>

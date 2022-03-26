@@ -8,35 +8,61 @@ import bg from "./Assets/img/BG.png";
 import { useState } from "react";
 import { userContext } from "./Store/userContext";
 import Tarefas from "./Data/Tasks.json";
+import Todo from "./Pages/Todo/todo";
 
 const App = () => {
   // Authentication
   const [authentication, setAuthentication] = useState("");
 
+  // Show Todo Page
+
+  const [onPage, setOnPage] = useState(false);
+
   // Tasks Data
   const [allTasks, setAllTasks] = useState(Tarefas);
 
+  // Render Order
+  const renderOrder = () => {
+    if (onPage === false) {
+      return (
+        <>
+          {/* BackGround */}
+          <img className="headerBG" src={bg} alt="Header Background" />
+
+          {/* Header and Main section */}
+          <Header />
+          <MainSection />
+
+          {/* Components inside grid */}
+          <div className="main__grid">
+            <Article />
+            <Form />
+          </div>
+
+          {/* Footer */}
+          <Footer />
+        </>
+      );
+    }
+
+    if (onPage === true) {
+      return <Todo />;
+    }
+  };
+
   return (
-    <div className="main__container">
-      <userContext.Provider
-        value={{
-          authentication,
-          setAuthentication,
-          allTasks,
-          setAllTasks,
-        }}
-      >
-        <img className="headerBG" src={bg} alt="Header Background" />
-        <Header />
-        <MainSection />
-        {/* Components inside grid */}
-        <div className="main__grid">
-          <Article />
-          <Form />
-        </div>
-        <Footer />
-      </userContext.Provider>
-    </div>
+    <userContext.Provider
+      value={{
+        authentication,
+        setAuthentication,
+        allTasks,
+        setAllTasks,
+        onPage,
+        setOnPage,
+      }}
+    >
+      <div className="main__container">{renderOrder()} </div>
+    </userContext.Provider>
   );
 };
 

@@ -1,0 +1,48 @@
+@use "../../styles/colors";
+@use "../../styles/typography";
+
+.todo {
+  &__container {
+    padding: 1.5rem 1.5rem 6rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    width: 90%;
+  }
+  &__nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      background-color: colors.$preto;
+      color: colors.$branco;
+      height: 40px;
+      width: 120px;
+      border: none;
+      font-family: typography.$poppinsFont;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    font-family: typography.$montSerrantFont;
+    margin-top: 4rem;
+    h1 {
+      font-size: 6rem;
+      line-height: 40px;
+    }
+
+    p{
+      color: colors.$verdeClaro;
+      font-size: 5rem;
+      font-weight: lighter;
+    }
+  }
+  &__section {
+    display: flex;
+    margin-top: 6rem;
+  }
+}
