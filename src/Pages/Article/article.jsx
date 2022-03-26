@@ -1,6 +1,9 @@
 import "./article.scss";
+import "swiper/css/bundle";
 import Card from "./Card/card";
 import CardsData from "../../Data/CardsData.json";
+import { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Article = () => {
   return (
@@ -10,9 +13,28 @@ const Article = () => {
 
       {/* Cards */}
       <div className="article__cardContainer">
-        {CardsData.map((item) => (
-          <Card item={item} />
-        ))}
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={200}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            560: {
+              slidesPerView: 2,
+            },
+            767: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {CardsData.map((item) => (
+            <SwiperSlide key={item.id}>
+              <Card item={item} key={item.id} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </article>
   );

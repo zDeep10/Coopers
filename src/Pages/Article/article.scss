@@ -20,16 +20,31 @@
   }
 
   &__cardContainer {
-    display: flex;
+    width: 110%;
+
+    .swiper-pagination-bullet {
+      background-color: colors.$verdeClaro;
+      width: 25px;
+      height: 25px;
+    }
+
+    .swiper-pagination {
+    }
+    .swiper{
+      padding: 0 2rem;
+      height: 530px;
+    }
   }
 
   &__card {
+    cursor: grab;
     margin-right: 2rem;
     margin-top: 3rem;
     width: min-content;
+    height: 430px;
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 6px 5px 20px #66666679;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.185);
   }
 
   // Card Header
