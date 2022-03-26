@@ -2,7 +2,7 @@ import cooIcon from "../../../Assets/icons/icon-coopers.png";
 import bitmap from "../../../Assets/img/bitmap2.png";
 
 const Card = ({ item }) => {
-  const imgPath = "./src/Assets/img" + item.img;
+  const imgPath = "src/Assets/img" + item.img;
 
   return (
     <div className="article__card">

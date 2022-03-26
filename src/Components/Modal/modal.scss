@@ -11,7 +11,7 @@
       width: 65%;
       max-width: 1000px;
       background-color: colors.$branco;
-      z-index: 1;
+      z-index: 2;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -73,7 +73,7 @@
     label {
       font-size: 1.8rem;
       font-weight: 600;
-      margin-bottom: .7rem;
+      margin-bottom: 0.7rem;
     }
 
     input {
@@ -90,11 +90,11 @@
     .error {
       font-size: 1.3rem;
       color: rgb(241, 28, 28);
-      margin-left: .5rem;
+      margin-left: 0.5rem;
       margin-top: 1rem;
     }
 
-    .reSize{
+    .reSize {
       margin-top: 2rem;
     }
 
