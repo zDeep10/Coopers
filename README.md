@@ -1,7 +1,7 @@
 # Teste Coopers
 
 - <a href=#>Visualizar Projeto</a>
-  Projeto do tipo Clone UI. Desenvolvido durante um processo seletivo.
+  Projeto do tipo Clone UI. Desenvolvido durante processo seletivo.
 
 # Processo de desenvolvimento
 
@@ -18,6 +18,8 @@ Header, Main Section, Article, Form Section e Footer. (Cabeçalho, Seção princ
 
 E por ultimo, apos organizar e separar a aplicação em partes, eu dou incinio a execução de cada requisito.
 
+Entre cada funcionalidade que precisa ser implementada, eu a divido em pequenas partes, onde fica mais facil visualizar e executar o que precisar ser feito.
+
 # Requisitos gerais
 
 [ ] Desenvolver o Layout (Responsivo)
@@ -31,7 +33,7 @@ E por ultimo, apos organizar e separar a aplicação em partes, eu dou incinio a
 [ x ] Trabalho adicional: fazer um login/senha para acessar a página (acesso com credenciais);
 
 [ ] Ao final do teste, me enviar por e-mail hospedado em um servidor + texto descritivo de como
-    foi para você fazer este desafio + acesso ao repositório de arquivos.
+foi para você fazer este desafio + acesso ao repositório de arquivos.
 
 [ ] Hospedar aplicação no HEROKU
 
@@ -53,11 +55,9 @@ E por ultimo, apos organizar e separar a aplicação em partes, eu dou incinio a
 
 [ x ] Estilização com Css(scss)
 
-[ ] Consumo com Axios
-
 [ x ] Modal de cadastro
 
-[ ] Validar campos
+[ x ] Validar campos
 
 [ ] Criar Slides
 
@@ -85,7 +85,3 @@ E por ultimo, apos organizar e separar a aplicação em partes, eu dou incinio a
 [ x ] Footer
 [ x ] Fundo escuro
 [ x ] Email ajuda
-
-# Back-End
-
-[ ] Construir API com Express

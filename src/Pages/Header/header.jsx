@@ -39,7 +39,7 @@ const Header = () => {
 
               <p className="margin">The only way to get things done</p>
 
-              <button>Go to TO-do list</button>
+              <button>Go to To-do list</button>
             </div>
 
             {/* Second Block */}

@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 
     .line {
       background-color: colors.$verdeClaro;
@@ -61,5 +61,19 @@
     margin-top: 5rem;
     display: flex;
     justify-content: center;
+  }
+
+  // Create Button
+  &__createButton {
+    font-size: 2rem;
+    font-family: typography.$poppinsFont;
+    padding: 0.8rem 4rem;
+    border-radius: 10px;
+    border: none;
+    background-color: colors.$verdeClaro;
+    color: colors.$branco;
+    cursor: pointer;
+    letter-spacing: .2rem;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.671);
   }
 }

@@ -1,4 +1,5 @@
 @use "../../styles/colors";
+@use "../../styles/typography";
 
 .button{
     &__container{
@@ -9,7 +10,10 @@
         border: none;
         color: colors.$branco;
         font-weight: 600;
-        font-size: 2.2rem;
+        font-size: 2.4rem;
         border-radius: 10px;
+        font-family: typography.$montSerrantFont;
+        letter-spacing: .2rem;
+        cursor: pointer;
     }
 }

@@ -1,13 +1,70 @@
 import "./form.scss";
 import icoEmail from "../../Assets/icons/icon-mail.png";
 import avatar from "../../Assets/img/image_avatar.png";
+import getInThouch from "../../Validation/getInThouchValidation";
+import { useState } from "react";
 
 const Form = () => {
+  // Error states
+  const [emailError, setEmailError] = useState(null);
+  const [phoneError, setPhoneError] = useState(null);
+  const [messageError, setMessageError] = useState(null);
+  const [sentMessage, setSentMessage] = useState(false);
+
+  // Handling with form
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Storing inputs data
+    const form = new FormData(e.target);
+    const formData = Object.fromEntries(form.entries());
+
+    // Form Validation
+    try {
+      const isValid = await getInThouch.validate(formData);
+      setEmailError(null);
+      setPhoneError(null);
+      setMessageError(null);
+
+      setSentMessage(true);
+
+      // Showing error messages
+    } catch (err) {
+      if (
+        err.message.includes("email") ||
+        err.message.includes("telephone") ||
+        err.message.includes("message")
+      ) {
+        if (err.message.includes("email")) {
+          setEmailError(err.message);
+          setPhoneError(null);
+          setMessageError(null);
+        }
+
+        if (err.message.includes("telephone")) {
+          setPhoneError(err.message);
+          setEmailError(null);
+          setMessageError(null);
+        }
+
+        if (err.message.includes("message")) {
+          setMessageError(err.message);
+          setPhoneError(null);
+          setEmailError(null);
+        }
+      }
+    }
+  };
+
   return (
     <div className="form__container">
       {/* Header */}
       <div className="greenDetail"></div>
-      <img className="position" src={avatar} alt="Imagem avatar" loading="lazy" />
+      <img
+        className="position"
+        src={avatar}
+        alt="Imagem avatar"
+        loading="lazy"
+      />
 
       {/* Icon and Title */}
       <div className="form__getInTouch">
@@ -18,7 +75,7 @@ const Form = () => {
       </div>
 
       {/* Form */}
-      <form className="form__block" action="#">
+      <form onSubmit={handleSubmit} className="form__block">
         {/* Name input */}
         <div className="form__name">
           <label>Your name</label>
@@ -30,22 +87,33 @@ const Form = () => {
           {/* Email */}
           <div className="size">
             <label>Email*</label>
-            <input type="email" required placeholder="example@example.com" />
+            <input name="email" type="text" placeholder="example@example.com" />
+            {emailError && <span className="error">{emailError}</span>}
           </div>
 
           {/* Telephone */}
           <div className="size">
             <label>Telephone*</label>
-            <input type="text" required placeholder="(  ) ____-____" />
+            <input name="telephone" type="text" placeholder="(  ) ____-____" />
+            {phoneError && <span className="error">{phoneError}</span>}
           </div>
         </div>
 
         {/* Message input */}
         <div className="form__message">
           <label>Message*</label>
-          <textarea required placeholder="Type what you want to say to us" />
+          <textarea
+            name="message"
+            placeholder="Type what you want to say to us"
+          />
+          {messageError && <span className="error">{messageError}</span>}
         </div>
-        <button>Send Now</button>
+
+        {sentMessage ? (
+          <span className="sentMessage">Thanks for get in thouch!</span>
+        ) : (
+          <button>SEND NOW</button>
+        )}
       </form>
     </div>
   );

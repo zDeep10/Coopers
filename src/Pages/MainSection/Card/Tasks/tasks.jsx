@@ -5,61 +5,33 @@ import Editable from "../Editable/editable";
 import { userContext } from "../../../../Store/userContext";
 import { Draggable } from "react-beautiful-dnd";
 
-const Taks = ({ tasks, name, index }) => {
+const Taks = ({ tasks, name }) => {
   // Tasks Context
-  const { setTodoTasks, setDoneTasks, todoTasks, doneTasks } =
-    useContext(userContext);
+  const { allTasks, setAllTasks } = useContext(userContext);
 
-  const [task, setTask] = useState("");
+  const [updatedTask, setUpdatedTask] = useState("");
 
-  const completeTasks = () => {
+  const completeTasks = (id) => {
     // Todo Check
-    if (name == "To-do") {
-      setTodoTasks(
-        todoTasks.map((todo) => {
-          if (todo.id === tasks.id) {
-            if (todo.complete == true) {
-              todo.complete = false;
-            } else {
-              todo.complete = true;
-            }
-          }
-
-          return todo;
-        })
-      );
-    }
-
-    // Done Check
-    if (name == "Done") {
-      setDoneTasks(
-        doneTasks.map((todo) => {
-          if (todo.id === tasks.id) {
-            if (todo.complete == true) {
-              todo.complete = false;
-            } else {
-              todo.complete = true;
-            }
-          }
-
-          return todo;
-        })
-      );
-    }
+    setAllTasks(
+      allTasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, complete: !task.complete };
+        } else {
+          return task;
+        }
+      })
+    );
   };
 
   // Delete Task
-
-  const deleteTask = () => {
-    setTodoTasks((todos) => todos.filter((todo) => todo.id !== tasks.id));
-    setDoneTasks((todos) => todos.filter((todo) => todo.id !== tasks.id));
+  const deleteTask = (id) => {
+    setAllTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
   // Update Task
+  const updateTask = (task) => {};
 
-  const updateTask = (e) => {
-    setTask(e.target.value);
-  };
   const checkBoxType = (data) => {
     // Type of checkBox
     if (name == "Done") {
@@ -70,45 +42,47 @@ const Taks = ({ tasks, name, index }) => {
   };
 
   return (
-    <Draggable key={tasks.id} draggableId={tasks.id} index={index}>
-      {(provided) => (
+    // <Draggable key={tasks.id} draggableId={tasks.id} index={index}>
+    //   {(provided) => (
+    <div className="card__tasks">
+      <div className="flexAdjust">
+        {/* CheckBox */}
         <div
-          className="card__tasks"
-          {...provided.draggableProps}
-          {...provided.dragHandleProps}
-          ref={provided.innerRef}
+          onClick={() => completeTasks(tasks.id)}
+          className={`card__checkBox ${name == "Done" ? "greenBorder" : ""} ${
+            tasks.complete && "greyBorder"
+          }`}
         >
-          <div className="flexAdjust">
-            {/* CheckBox */}
-            <div
-              onClick={completeTasks}
-              className={`card__checkBox ${
-                name == "Done" ? "greenBorder" : ""
-              } ${tasks.complete && "greyBorder"}`}
-            >
-              {tasks.complete && checkBoxType(tasks)}
-            </div>
-
-            {/* Task Name */}
-            <div className={`card__task ${tasks.complete && "activeTitle"}`}>
-              <Editable text={task} placeholder={tasks.name} type="input">
-                <input
-                  type="text"
-                  name="task"
-                  placeholder="One more click to edit"
-                  onChange={(e) => updateTask(e)}
-                />
-              </Editable>
-            </div>
-          </div>
-
-          {/* Delete */}
-          <div onClick={deleteTask} className="card__delete">
-            delete
-          </div>
+          {tasks.complete && checkBoxType(tasks)}
         </div>
-      )}
-    </Draggable>
+
+        {/* Task Name */}
+        <div className={`card__task ${tasks.complete && "activeTitle"}`}>
+          <Editable
+            text={updatedTask}
+            placeholder={tasks.name}
+            allTasks={allTasks}
+            setAllTasks={setAllTasks}
+            id={tasks.id}
+            type="input"
+          >
+            <input
+              type="text"
+              name="task"
+              placeholder="One more click to edit"
+              onChange={(e) => setUpdatedTask(e.target.value)}
+            />
+          </Editable>
+        </div>
+      </div>
+
+      {/* Delete */}
+      <div onClick={() => deleteTask(tasks.id)} className="card__delete">
+        delete
+      </div>
+    </div>
+    //   )}
+    // </Draggable>
   );
 };
 

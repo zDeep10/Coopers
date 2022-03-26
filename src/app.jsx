@@ -5,20 +5,16 @@ import Header from "./Pages/Header/header";
 import MainSection from "./Pages/MainSection/section";
 import "./styles/global.scss";
 import bg from "./Assets/img/BG.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { userContext } from "./Store/userContext";
-import TodoTasks from "./Data/TodoTasks.json";
-import DoneTasks from "./Data/DoneTasks.json";
+import Tarefas from "./Data/Tasks.json";
 
 const App = () => {
   // Authentication
   const [authentication, setAuthentication] = useState("");
 
   // Tasks Data
-  const [todoTasks, setTodoTasks] = useState(TodoTasks);
-  const [doneTasks, setDoneTasks] = useState(DoneTasks);
-
-  
+  const [allTasks, setAllTasks] = useState(Tarefas);
 
   return (
     <div className="main__container">
@@ -26,10 +22,8 @@ const App = () => {
         value={{
           authentication,
           setAuthentication,
-          todoTasks,
-          setTodoTasks,
-          doneTasks,
-          setDoneTasks,
+          allTasks,
+          setAllTasks,
         }}
       >
         <img className="headerBG" src={bg} alt="Header Background" />

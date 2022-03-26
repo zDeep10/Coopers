@@ -1,14 +1,11 @@
 import Cards from "./Card/card";
 import "./section.scss";
 import graphism from "../../Assets/img/grafismos.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import CreateModal from "../../Components/CreateTask/Modal/createModal";
 
 const MainSection = () => {
-  const [winReady, setWinReady] = useState(false);
-
-  useEffect(() => {
-    setWinReady(true);
-  }, []);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <section className="section__container">
@@ -22,6 +19,13 @@ const MainSection = () => {
         </p>
       </div>
 
+      {/* Modal */}
+      {showModal && (
+        <>
+          <CreateModal setShowModal={setShowModal} />
+        </>
+      )}
+
       <img
         className="graphismIMG"
         src={graphism}
@@ -30,12 +34,16 @@ const MainSection = () => {
       />
 
       {/* Todo Cards  */}
-
       <div className="section__cards">
-        {winReady ? <Cards name={"To-do"} /> : null}
-
-        {/* <Cards name={"Done"} /> */}
+        <Cards name={"To-do"} />
+        <Cards name={"Done"} />
       </div>
+      <button
+        className="section__createButton"
+        onClick={() => setShowModal(true)}
+      >
+        New Task
+      </button>
     </section>
   );
 };

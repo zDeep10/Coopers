@@ -1,7 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { userContext } from "../../../../Store/userContext";
 import "./editable.scss";
 
-const Editable = ({ text, type, placeholder, children, ...props }) => {
+const Editable = ({
+  text,
+  placeholder,
+  children,
+  id,
+  allTasks,
+  setAllTasks,
+  ...props
+}) => {
   const [isEditing, setEditing] = useState(false);
 
   const handleKeyDown = (event) => {
@@ -9,6 +18,16 @@ const Editable = ({ text, type, placeholder, children, ...props }) => {
 
     if (key == "Enter") {
       setEditing(false);
+
+      setAllTasks(
+        allTasks.map((task) => {
+          if (task.id === id) {
+            return { ...task, name: text };
+          } else {
+            return task;
+          }
+        })
+      );
     }
   };
 

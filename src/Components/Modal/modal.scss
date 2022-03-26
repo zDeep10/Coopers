@@ -8,7 +8,7 @@
     .modal {
       top: 30px;
       position: fixed;
-      width: 90%;
+      width: 65%;
       max-width: 1000px;
       background-color: colors.$branco;
       z-index: 1;
@@ -22,8 +22,9 @@
 
     img {
       position: absolute;
-      left: 40px;
+      left: 5px;
       top: 100px;
+      z-index: -2;
     }
 
     .backdrop {
