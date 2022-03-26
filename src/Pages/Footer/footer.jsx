@@ -1,5 +1,5 @@
 import "./footer.scss";
-import greenBG from "../../Assets/img/footer_bgGreen.png";
+import greenBG from "../../img/footer_bgGreen.png";
 
 const Footer = () => {
   return (

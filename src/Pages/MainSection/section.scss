@@ -28,7 +28,7 @@
   &__bg {
     width: 100%;
     height: 480px;
-    background-image: url("../../Assets/img/Section-blackBG.png");
+    background-image: url("../../img/Section-blackBG.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -65,12 +65,12 @@
 
   // Create Button
   &__createButton {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: typography.$poppinsFont;
     padding: 0.8rem 4rem;
     border-radius: 10px;
     border: none;
-    background-color: colors.$verdeClaro;
+    background-color: colors.$preto;
     color: colors.$branco;
     cursor: pointer;
     letter-spacing: .2rem;

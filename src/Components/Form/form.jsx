@@ -1,6 +1,6 @@
 import "./form.scss";
 import icoEmail from "../../Assets/icons/icon-mail.png";
-import avatar from "../../Assets/img/image_avatar.png";
+import avatar from "../../img/image_avatar.png";
 import getInThouch from "../../Validation/getInThouchValidation";
 import { useState } from "react";
 

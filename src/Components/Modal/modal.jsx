@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import "./modal.scss";
-import modalImg from "../../Assets/img/sign-in-img.png";
+import modalImg from "../../img/sign-in-img.png";
 import userSchema from "../../Validation/modalValidation";
 import { useState, useContext } from "react";
 import { userContext } from "../../Store/userContext";

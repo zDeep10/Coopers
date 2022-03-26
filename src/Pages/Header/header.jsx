@@ -1,6 +1,6 @@
 import "./header.scss";
-import logo from "../../Assets/img/Logo.png";
-import sala from "../../Assets/img/02.png";
+import logo from "../../img/Logo.png";
+import sala from "../../img/02.png";
 import arrow from "../../Assets/icons/icon-scroll.png";
 import Modal from "../../Components/Modal/modal";
 import { useState } from "react";

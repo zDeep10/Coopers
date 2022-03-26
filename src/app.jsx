@@ -4,7 +4,7 @@ import Footer from "./Pages/Footer/footer";
 import Header from "./Pages/Header/header";
 import MainSection from "./Pages/MainSection/section";
 import "./styles/global.scss";
-import bg from "./Assets/img/BG.png";
+import bg from "./img/BG.png";
 import { useState, useEffect } from "react";
 import { userContext } from "./Store/userContext";
 import Tarefas from "./Data/Tasks.json";
