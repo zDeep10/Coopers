@@ -13,6 +13,8 @@ const CreateModal = ({ setShowModal }) => {
   // Storing the newTask data
   const sendTask = () => {
     setAllTasks([...allTasks, taskData]);
+
+    setShowModal(false)
   };
 
   const taskData = {

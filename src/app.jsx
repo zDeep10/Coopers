@@ -5,7 +5,7 @@ import Header from "./Pages/Header/header";
 import MainSection from "./Pages/MainSection/section";
 import "./styles/global.scss";
 import bg from "./Assets/img/BG.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { userContext } from "./Store/userContext";
 import Tarefas from "./Data/Tasks.json";
 import Todo from "./Pages/Todo/todo";
@@ -20,6 +20,12 @@ const App = () => {
 
   // Tasks Data
   const [allTasks, setAllTasks] = useState(Tarefas);
+
+  useEffect(() => {
+    if (onPage === false) {
+      setAllTasks(Tarefas);
+    }
+  }, [onPage]);
 
   // Render Order
   const renderOrder = () => {

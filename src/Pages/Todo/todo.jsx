@@ -2,13 +2,25 @@ import "./todo.scss";
 import logo from "../../Assets/img/Logo.png";
 import Cards from "../MainSection/Card/card";
 import CreateModal from "../../Components/CreateTask/Modal/createModal";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { userContext } from "../../Store/userContext";
 
 const Todo = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const { setOnPage, setAuthentication } = useContext(userContext);
+  const { onPage, setOnPage, setAuthentication, setAllTasks } =
+    useContext(userContext);
+
+  // Erasing tasks when Todo Page is called
+  useEffect(() => {
+    const eraseAll = () => {
+      if (onPage) {
+        setAllTasks([]);
+      }
+    };
+
+    eraseAll();
+  }, []);
 
   return (
     <div className="todo__container">

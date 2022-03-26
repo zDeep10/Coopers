@@ -14,10 +14,6 @@ const Cards = ({ name }) => {
 
   const todoTasks = allTasks.filter((task) => !task.complete);
 
-  const eraseAll = () => {
-    alert("ola");
-  };
-
   return (
     // Container
     <div className="card__container">
@@ -30,7 +26,8 @@ const Cards = ({ name }) => {
       <p className={name == "Done" ? "newP" : ""}>
         {name == "Done" ? (
           <>
-            Congratulions! <br /> <span>You have done 5 tasks</span>
+            {doneTasks.length > 0 && "Congratulions!"} <br />
+            <span>You have done {doneTasks.length} tasks</span>
           </>
         ) : (
           "Take a breath. Start doing."

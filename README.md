@@ -1,6 +1,6 @@
 # Teste Coopers
 
-- <a href=#>Visualizar Projeto</a>
+- <a href="https://coopers-pearl.vercel.app/">Visualizar Projeto</a>
   Projeto do tipo Clone UI. Desenvolvido durante processo seletivo.
 
 # Processo de desenvolvimento
@@ -35,7 +35,7 @@ Entre cada funcionalidade que precisa ser implementada, eu a divido em pequenas 
 [ ] Ao final do teste, me enviar por e-mail hospedado em um servidor + texto descritivo de como
 foi para você fazer este desafio + acesso ao repositório de arquivos.
 
-[ ] Hospedar aplicação no HEROKU
+[ x ] Hospedar aplicação no HEROKU
 
 # Front-END
 

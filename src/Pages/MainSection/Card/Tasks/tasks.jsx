@@ -29,9 +29,6 @@ const Taks = ({ tasks, name }) => {
     setAllTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
-  // Update Task
-  const updateTask = (task) => {};
-
   const checkBoxType = (data) => {
     // Type of checkBox
     if (name == "Done") {
