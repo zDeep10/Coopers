@@ -59,29 +59,40 @@ foi para você fazer este desafio + acesso ao repositório de arquivos.
 
 [ x ] Validar campos
 
-[ ] Criar Slides
+[ x ] Criar Slides
 
 [ x ] Deixar funcional cards de tarefas
 
 # Layout
 
 [ x ] Header
-[ x ] Barra de navegação
-[ x ] Banner
-[ x ] Botão (Go to To-do list)
+
+    [ x ] Barra de navegação
+
+    [ x ] Banner
+
+    [ x ] Botão (Go to To-do list)
 
 [ x ] Main section
-[ x ] Titulo da sessão
-[ x ] Blocos To-do e Done
+
+   [ x ] Titulo da sessão
+
+   [ x ] Blocos To-do e Done
 
 [ x ] Article
-[ x ] Fundo verde
-[ x ] Cartas
+
+   [ x ] Fundo verde
+
+   [ x ] Cartas
 
 [ x ] Sessão
-[ x ] Avatar
-[ x ] Formulario
+
+   [ x ] Avatar
+
+   [ x ] Formulario
 
 [ x ] Footer
-[ x ] Fundo escuro
-[ x ] Email ajuda
+
+    [ x ] Fundo escuro
+
+    [ x ] Email ajuda
