@@ -15,17 +15,18 @@ const Article = () => {
       <div className="article__cardContainer">
         <Swiper
           modules={[Pagination]}
-          spaceBetween={200}
           pagination={{ clickable: true }}
           breakpoints={{
             560: {
-              slidesPerView: 2,
+              slidesPerView: 1,
             },
-            767: {
-              slidesPerView: 3,
+            732: {
+              slidesPerView: 2,
+              spaceBetween: 150
             },
             1024: {
               slidesPerView: 3,
+              spaceBetween: 200
             },
           }}
         >

@@ -11,10 +11,28 @@
     position: relative;
     margin-bottom: 5rem;
 
+    @media (max-width: 1008px) {
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 730px) {
+      margin-top: 5.5rem;
+    }
+
     .line {
       background-color: colors.$verdeClaro;
       width: 297px;
       height: 4px;
+
+      @media (max-width: 1008px) {
+        width: 30%;
+        height: 3px;
+      }
+
+      @media (max-width: 730px) {
+        width: 34%;
+        height: 2px;
+      }
     }
 
     .graphismIMG {
@@ -22,6 +40,14 @@
       left: 0;
       top: 530px;
       z-index: -1;
+
+      @media (max-width: 1008px) {
+        width: 10%;
+      }
+
+      @media (max-width: 730px) {
+        display: none;
+      }
     }
   }
 
@@ -37,6 +63,15 @@
     align-items: center;
     justify-content: center;
     z-index: -2;
+
+    @media (max-width: 1008px) {
+      height: 340px;
+    }
+
+    @media (max-width: 730px) {
+      height: 230px;
+      z-index: 1;
+    }
   }
 
   // Texts
@@ -46,6 +81,15 @@
     margin-top: 34px;
     color: colors.$branco;
     font-size: 2.5rem;
+
+    @media (max-width: 1008px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 730px) {
+      font-size: 1.8rem;
+      margin-top: 20px;
+    }
   }
 
   &__title {
@@ -53,6 +97,15 @@
     color: colors.$branco;
     font-family: typography.$poppinsFont;
     line-height: 6rem;
+
+    @media (max-width: 1008px) {
+      font-size: 4.5rem;
+    }
+
+    @media (max-width: 730px) {
+      font-size: 2.8rem;
+      line-height: 3.5rem;
+    }
   }
 
   // Todo Cards
@@ -61,6 +114,14 @@
     margin-top: 5rem;
     display: flex;
     justify-content: center;
+
+    @media (max-width: 1008px) {
+    }
+
+    @media (max-width: 730px) {
+      flex-direction: column;
+      width: 95%;
+    }
   }
 
   // Create Button
@@ -73,7 +134,7 @@
     background-color: colors.$preto;
     color: colors.$branco;
     cursor: pointer;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.671);
   }
 }

@@ -14,6 +14,10 @@
       font-size: 4rem;
       margin-top: 2.5rem;
       font-family: typography.$poppinsFont;
+
+      @media (max-width: 730px) {
+       font-size: 3.5rem;
+      }
     }
 
     p {
@@ -22,6 +26,13 @@
       font-size: 2.4rem;
       color: colors.$preto;
       margin-bottom: 3rem;
+
+      @media (max-width: 1008px) {
+      }
+  
+      @media (max-width: 730px) {
+        max-width: 300px;
+      }
     }
 
     .newP {

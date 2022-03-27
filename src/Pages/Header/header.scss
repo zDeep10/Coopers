@@ -8,11 +8,24 @@
     width: 90%;
     position: relative;
 
+    @media (max-width: 733px) {
+      margin-top: 3rem;
+      height: 80vh;
+    }
+
     .center {
       top: 100px;
       position: relative;
       width: 20px;
       margin: 0 auto;
+
+      @media (max-width: 1008px) {
+        top: 40px;
+      }
+
+      @media (max-width: 730px) {
+        top: 55px;
+      }
     }
 
     .arrowIcon {
@@ -31,8 +44,21 @@
   }
 
   &__sala {
+    @media (max-width: 733px) {
+      display: none;
+    }
+
+    @media (max-width: 1008px) {
+      width: 50%;
+      text-align: center;
+    }
+
     img {
       filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.541));
+
+      @media (max-width: 1008px) {
+        width: 85%;
+      }
     }
   }
 
@@ -43,6 +69,12 @@
     justify-content: space-between;
     align-items: center;
 
+    img {
+      @media (max-width: 730px) {
+        width: 40%;
+      }
+    }
+
     button {
       background-color: colors.$preto;
       color: colors.$branco;
@@ -52,6 +84,12 @@
       font-family: typography.$poppinsFont;
       font-weight: 600;
       cursor: pointer;
+
+      @media (max-width: 730px) {
+        width: 30%;
+        height: 30px;
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -61,18 +99,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1008px) {
+    }
+    
+    @media (max-width: 730px) {
+      margin-top: 10rem;
+    }
   }
 
   &__title {
+    @media (max-width: 1008px) {
+      width: 50%;
+    }
+
+    @media (max-width: 733px) {
+      width: 100%;
+    }
+
     h1 {
       font-size: 8rem;
       font-weight: 700;
       line-height: 6.4rem;
+
+      @media (max-width: 1008px) {
+        font-size: 5rem;
+        line-height: 4.5rem;
+      }
     }
 
     p {
       font-size: 2.5rem;
       font-weight: 600;
+
+      @media (max-width: 1008px) {
+        font-size: 2rem;
+      }
     }
 
     .dayle {
@@ -80,10 +142,24 @@
       font-size: 6rem;
       margin-bottom: 56px;
       font-weight: lighter;
+
+      @media (max-width: 1008px) {
+        font-size: 4rem;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 732px) {
+        font-size: 5.5rem;
+        margin-bottom: 30px;
+      }
     }
 
     .margin {
       margin-bottom: 44px;
+
+      @media (max-width: 732px) {
+        margin-bottom: 28rem;
+      }
     }
 
     .errorMessage {
@@ -106,6 +182,17 @@
       border: none;
       cursor: pointer;
       margin-bottom: 2rem;
+
+      @media (max-width: 1008px) {
+        width: 80%;
+        height: 50px;
+        font-size: 2.2rem;
+      }
+
+      @media (max-width: 732px) {
+        width: 100%;
+        margin-bottom: 0;
+      }
     }
   }
 }

@@ -114,3 +114,51 @@
     }
   }
 }
+
+@media (max-width: 733px) {
+  .modal {
+    &__container {
+      img {
+        width: 85%;
+        top: 170px;
+        left: 40px;
+      }
+      .modal {
+        width: 100wh;
+        height: 85%;
+      }
+    }
+
+    &__header {
+      margin: 6rem auto 0 auto;
+      h1 {
+        width: 700px;
+        font-size: 6.5rem;
+        
+        span{
+          font-size: 4.2rem;
+        }
+       
+      }
+    }
+
+    &__form {
+      width: 85%;
+
+      button{
+        margin-top: 7rem;
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 1008px) {
+  .modal {
+    &__container {
+      .modal {
+        width: 95%;
+      }
+    }
+  }
+}
