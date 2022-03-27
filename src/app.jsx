@@ -4,7 +4,7 @@ import Footer from "./Pages/Footer/footer";
 import Header from "./Pages/Header/header";
 import MainSection from "./Pages/MainSection/section";
 import "./styles/global.scss";
-import bg from "./img/BG.png";
+// import bg from "./img/BG.png";
 import { useState, useEffect } from "react";
 import { userContext } from "./Store/userContext";
 import Tarefas from "./Data/Tasks.json";
@@ -33,26 +33,26 @@ const App = () => {
       return (
         <>
           {/* BackGround */}
-          <img className="headerBG" src={bg} alt="Header Background" />
+          {/* <img className="headerBG" src={bg} alt="Header Background" /> */}
 
           {/* Header and Main section */}
-          <Header />
-          <MainSection />
+          {/* <Header /> */}
+          {/* <MainSection /> */}
 
           {/* Components inside grid */}
           <div className="main__grid">
             <Article />
-            <Form />
+            {/* <Form /> */}
           </div>
 
           {/* Footer */}
-          <Footer />
+          {/* <Footer /> */}
         </>
       );
     }
 
     if (onPage === true) {
-      return <Todo />;
+      // return <Todo />;
     }
   };
 
