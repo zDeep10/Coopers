@@ -20,23 +20,13 @@
       height: 90vh;
     }
     .center {
-      left: 550px;
-      top: 650px;
-      bottom: 0;
-      position: absolute;
-      width: 20px;
+      top: 80px;
       margin: 0 auto;
+      width: 20px;
+      position: relative;
 
       @media (max-width: 1008px) {
-        top: 430px;
-        left: 340px;
-        bottom: 0;
-      }
-
-      @media (max-width: 730px) {
-        top: 670px;
-        left: 180px;
-        bottom: 0;
+        top: 45px;
       }
     }
 
