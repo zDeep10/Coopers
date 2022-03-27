@@ -20,7 +20,7 @@
       box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.432);
 
       @media (max-width: 730px) {
-       top: 10px;
+       top: 20px;
       }
     }
 
@@ -129,7 +129,7 @@
       }
       .modal {
         width: 100wh;
-        height: 85%;
+        height: 100%;
       }
     }
 
@@ -140,14 +140,14 @@
         font-size: 6.5rem;
         
         span{
-          font-size: 4.2rem;
+          font-size: 3.9rem;
         }
        
       }
     }
 
     &__form {
-      width: 85%;
+      width: 95%;
 
       button{
         margin-top: 7rem;
