@@ -85,7 +85,7 @@ foi para você fazer este desafio + acesso ao repositório de arquivos.
 
      [ x ] Cartas
 
-[ x ] Sessão
+[ x ] Form Section
 
      [ x ] Avatar
 
