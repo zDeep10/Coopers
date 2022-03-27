@@ -118,9 +118,10 @@
     @media (max-width: 1008px) {
     }
 
-    @media (max-width: 730px) {
+    @media (max-width: 732px) {
       flex-direction: column;
-      width: 95%;
+      align-items: center;
+      width: 100%;
     }
   }
 

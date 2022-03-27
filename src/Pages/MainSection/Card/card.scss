@@ -10,6 +10,10 @@
     max-width: 380px;
     text-align: center;
 
+    @media (max-width: 730px) {
+      margin: 0;
+    }
+
     h3 {
       font-size: 4rem;
       margin-top: 2.5rem;
