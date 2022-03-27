@@ -1,7 +1,7 @@
 import cooIcon from "../../../Assets/icons/icon-coopers.png";
 
 const Card = ({ item }) => {
-  let imgPath = "/img" + item.img;
+  let imgPath = "/assets/img" + item.img;
 
   console.log(imgPath)
 
