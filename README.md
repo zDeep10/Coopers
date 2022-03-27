@@ -75,21 +75,21 @@ foi para você fazer este desafio + acesso ao repositório de arquivos.
 
 [ x ] Main section
 
-   [ x ] Titulo da sessão
+    [ x ] Titulo da sessão
 
-   [ x ] Blocos To-do e Done
+    [ x ] Blocos To-do e Done
 
 [ x ] Article
 
-   [ x ] Fundo verde
+    [ x ] Fundo verde
 
-   [ x ] Cartas
+     [ x ] Cartas
 
-[ x ] Sessão
+[ x ] Form Section
 
-   [ x ] Avatar
+     [ x ] Avatar
 
-   [ x ] Formulario
+     [ x ] Formulario
 
 [ x ] Footer
 
