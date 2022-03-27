@@ -9,16 +9,17 @@ const CreateModal = ({ setShowModal }) => {
 
   // Random ID
   const randomNumber = Math.floor(Math.random() * 100);
+  const randomStringNumber = randomNumber.toString();
 
   // Storing the newTask data
   const sendTask = () => {
     setAllTasks([...allTasks, taskData]);
 
-    setShowModal(false)
+    setShowModal(false);
   };
 
   const taskData = {
-    id: randomNumber,
+    id: randomStringNumber,
     name: newTask,
     complete: false,
   };

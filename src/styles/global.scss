@@ -24,7 +24,6 @@ html {
 .main {
   &__container {
     margin: 0 auto;
-    height: 100vh;
     position: relative;
     .headerBG {
       position: absolute;
@@ -32,13 +31,14 @@ html {
       top: 0;
       z-index: -1;
 
-      @media (max-width: 1008px) {
-        width: 40%;
+      @media (min-width: 733px) {
+        display: none;
       }
 
       @media (max-width: 732px) {
-        width:100%;
-        opacity: .3;
+        width: 100%;
+        opacity: 0.3;
+        display: block;
       }
     }
   }

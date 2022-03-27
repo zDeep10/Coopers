@@ -25,7 +25,7 @@ const Cards = ({ name }) => {
       <h3>{name}</h3>
       <p className={name == "Done" ? "newP" : ""}>
         {name == "Done" ? (
-          <>
+        <>
             {doneTasks.length > 0 && "Congratulions!"} <br />
             <span>You have done {doneTasks.length} tasks</span>
           </>
@@ -35,23 +35,32 @@ const Cards = ({ name }) => {
       </p>
 
       {/* Tasks */}
-      {name == "Done"
-        ? doneTasks.map((task) => (
-            <Tasks
-              name={name}
-              tasks={task}
-              key={task.id}
-              doneTasks={doneTasks}
-            />
-          ))
-        : todoTasks.map((task) => (
-            <Tasks
-              name={name}
-              tasks={task}
-              key={task.id}
-              todoTasks={todoTasks}
-            />
-          ))}
+      <DragDropContext>
+        <Droppable droppableId="tasks">
+          {(provided) => (
+            <ul {...provided.droppableProps} ref={provided.innerRef}>
+              {name == "Done"
+                ? doneTasks.map((task, index) => (
+                    <Tasks
+                      index={index}
+                      name={name}
+                      tasks={task}
+                      doneTasks={doneTasks}
+                    />
+                  ))
+                : todoTasks.map((task, index) => (
+                    <Tasks
+                      index={index}
+                      name={name}
+                      tasks={task}
+                      todoTasks={todoTasks}
+                    />
+                  ))}
+              {provided.placeholder}
+            </ul>
+          )}
+        </Droppable>
+      </DragDropContext>
 
       <Button name={name} />
     </div>

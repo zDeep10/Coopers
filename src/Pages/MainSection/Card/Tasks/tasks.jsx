@@ -5,7 +5,7 @@ import Editable from "../Editable/editable";
 import { userContext } from "../../../../Store/userContext";
 import { Draggable } from "react-beautiful-dnd";
 
-const Taks = ({ tasks, name }) => {
+const Taks = ({ tasks, name, index }) => {
   // Tasks Context
   const { allTasks, setAllTasks } = useContext(userContext);
 
@@ -39,47 +39,52 @@ const Taks = ({ tasks, name }) => {
   };
 
   return (
-    // <Draggable key={tasks.id} draggableId={tasks.id} index={index}>
-    //   {(provided) => (
-    <div className="card__tasks">
-      <div className="flexAdjust">
-        {/* CheckBox */}
-        <div
-          onClick={() => completeTasks(tasks.id)}
-          className={`card__checkBox ${name == "Done" ? "greenBorder" : ""} ${
-            tasks.complete && "greyBorder"
-          }`}
+    <Draggable key={tasks.id} draggableId={tasks.id} index={index}>
+      {(provided) => (
+        <li
+          className="card__tasks"
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          ref={provided.innerRef}
         >
-          {tasks.complete && checkBoxType(tasks)}
-        </div>
+          <div className="flexAdjust">
+            {/* CheckBox */}
+            <div
+              onClick={() => completeTasks(tasks.id)}
+              className={`card__checkBox ${
+                name == "Done" ? "greenBorder" : ""
+              } ${tasks.complete && "greyBorder"}`}
+            >
+              {tasks.complete && checkBoxType(tasks)}
+            </div>
 
-        {/* Task Name */}
-        <div className={`card__task ${tasks.complete && "activeTitle"}`}>
-          <Editable
-            text={updatedTask}
-            placeholder={tasks.name}
-            allTasks={allTasks}
-            setAllTasks={setAllTasks}
-            id={tasks.id}
-            type="input"
-          >
-            <input
-              type="text"
-              name="task"
-              placeholder="One more click to edit"
-              onChange={(e) => setUpdatedTask(e.target.value)}
-            />
-          </Editable>
-        </div>
-      </div>
+            {/* Task Name */}
+            <div className={`card__task ${tasks.complete && "activeTitle"}`}>
+              <Editable
+                text={updatedTask}
+                placeholder={tasks.name}
+                allTasks={allTasks}
+                setAllTasks={setAllTasks}
+                id={tasks.id}
+                type="input"
+              >
+                <input
+                  type="text"
+                  name="task"
+                  placeholder="One more click to edit"
+                  onChange={(e) => setUpdatedTask(e.target.value)}
+                />
+              </Editable>
+            </div>
+          </div>
 
-      {/* Delete */}
-      <div onClick={() => deleteTask(tasks.id)} className="card__delete">
-        delete
-      </div>
-    </div>
-    //   )}
-    // </Draggable>
+          {/* Delete */}
+          <div onClick={() => deleteTask(tasks.id)} className="card__delete">
+            delete
+          </div>
+        </li>
+      )}
+    </Draggable>
   );
 };
 

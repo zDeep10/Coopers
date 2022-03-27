@@ -55,7 +55,7 @@ const App = () => {
       return (
         <>
           <Todo />
-          <img className="headerBG" src={bg} alt="Header Background" />;
+          <img className="headerBG" src={bg} alt="Header Background" />
         </>
       );
     }
