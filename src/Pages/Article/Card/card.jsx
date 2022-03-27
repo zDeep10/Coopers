@@ -2,11 +2,11 @@
 // import cardsImg from "../../../Data/CardsData.json"
 
 const Card = ({ item }) => {
-  const imgPath = "./public/img" + item.img;
+  
   return (
     <div className="article__card">
       <div className="article__img">
-        <img className="radius" src={imgPath} alt="Daily jobs" loading="lazy" />
+        <img className="radius" src={"/img" + item.img} alt="Daily jobs" loading="lazy" />
 
         <img className="position" src={""} alt="Coopers Icon" loading="lazy" />
       </div>

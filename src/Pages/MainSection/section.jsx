@@ -1,6 +1,6 @@
 import Cards from "./Card/card";
 import "./section.scss";
-import graphism from "../../../public/img/grafismos.png";
+// import graphism from "../../../public/img/grafismos.png";
 
 const MainSection = () => {
   return (
