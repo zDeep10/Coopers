@@ -1,12 +1,15 @@
 import cooIcon from "../../../Assets/icons/icon-coopers.png";
+import cardsImg from "../../../Data/CardsData.json"
 
 const Card = ({ item }) => {
+
+  console.log(cardsImg)
   return (
     <div className="article__card">
       <div className="article__img">
         <img
           className="radius"
-          src={"/src/img" + item.img}
+          src={"./src/img" + item.img}
           alt="Daily jobs"
           loading="lazy"
         />
