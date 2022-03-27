@@ -52,7 +52,12 @@ const App = () => {
     }
 
     if (onPage === true) {
-      return <Todo />;
+      return (
+        <>
+          <Todo />
+          <img className="headerBG" src={bg} alt="Header Background" />;
+        </>
+      );
     }
   };
 

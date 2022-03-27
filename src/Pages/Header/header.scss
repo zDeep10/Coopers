@@ -40,6 +40,12 @@
         margin-left: 0.5rem;
         color: colors.$verdeClaro;
       }
+
+      @media (max-width: 733px) {
+        text-align: right;
+        width: 30%;
+        margin-right: 0;
+      }
     }
   }
 

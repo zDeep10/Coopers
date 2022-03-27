@@ -19,18 +19,21 @@
 
     @media (max-width: 730px) {
       width: 95%;
-      height: 400px;
+      height: 460px;
       padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      
     }
 
     h2 {
       color: colors.$branco;
       font-size: 4.8rem;
       font-weight: 700;
+
+      @media (max-width: 730px) {
+        font-size: 3.5rem;
+      }
     }
   }
 
@@ -42,7 +45,8 @@
     }
 
     @media (max-width: 730px) {
-      width: 100%;
+      width: 110%;
+      margin-left: 4rem;
     }
 
     .swiper-pagination-bullet {
