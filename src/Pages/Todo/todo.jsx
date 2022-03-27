@@ -1,5 +1,5 @@
 import "./todo.scss";
-// import logo from "../../img/Logo.png";
+import logo from "/img/Logo.png";
 import Cards from "../MainSection/Card/card";
 import CreateModal from "../../Components/CreateTask/Modal/createModal";
 import { useContext, useEffect, useState } from "react";

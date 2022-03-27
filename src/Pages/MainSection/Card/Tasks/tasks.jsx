@@ -1,5 +1,5 @@
-// import success from "../../../../Assets/icons/icon_success.png";
-// import success2 from "../../../../Assets/icons/icon_success2.png";
+import success from "/icons/icon_success.png";
+import success2 from "/icons/icon_success2.png";
 import { useState, useContext } from "react";
 import Editable from "../Editable/editable";
 import { userContext } from "../../../../Store/userContext";
