@@ -73,9 +73,9 @@ const Header = () => {
           </div>
         </div>
 
-        {/* <div className="center">
+        <div className="center">
           <img className="arrowIcon" src={arrow} alt="Arrow Icon" />
-        </div> */}
+        </div>
       </header>
     </div>
   );
