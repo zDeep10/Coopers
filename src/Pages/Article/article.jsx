@@ -19,6 +19,7 @@ const Article = () => {
           breakpoints={{
             560: {
               slidesPerView: 1,
+              spaceBetween: 500
             },
             732: {
               slidesPerView: 2,

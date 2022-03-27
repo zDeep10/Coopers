@@ -30,47 +30,53 @@ const Header = () => {
 
   return (
     <div className="main__grid">
-      <div className="main__grid">
-        <header className="header__container">
-          {/* Nav */}
-          <nav className="header__nav">
-            <img src={logo} alt="Logo Coopers" />
+      <header className="header__container">
+        {/* Nav */}
+        <nav className="header__nav">
+          <img src={logo} alt="Logo Coopers" />
 
-            {authentication ? (
-              <h2 className="authentication">
-                Welcome <span>{authentication}</span>
-              </h2>
-            ) : (
-              <button onClick={() => setShowModal(true)}>Sign in</button>
-            )}
-          </nav>
+          {authentication ? (
+            <h2 className="authentication">
+              Welcome <span>{authentication}</span>
+            </h2>
+          ) : (
+            <button onClick={() => setShowModal(true)}>Sign in</button>
+          )}
+        </nav>
 
-          {/* Modal */}
-          <Modal showModal={showModal} setShowModal={setShowModal} setErrorMessage={setErrorMessage} />
+        {/* Modal */}
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          setErrorMessage={setErrorMessage}
+        />
 
-          {/* First Block */}
-          <div className="header__flex">
-            <div className="header__title">
+        {/* First Block */}
+        <div className="header__flex">
+          <div className="header__title">
+            <div>
               <h1>Organize</h1>
               <p className="dayle">your daily jobs</p>
 
               <p className="margin">The only way to get things done</p>
-
-              <button onClick={pageCall}>Go to To-do list</button>
-              {errorMessage && <span className="errorMessage">You must be logged</span>}
             </div>
 
-            {/* Second Block */}
-            <div className="header__sala">
-              <img src={sala} alt="Imagem Sala" />
-            </div>
+            <button onClick={pageCall}>Go to To-do list</button>
+            {errorMessage && (
+              <span className="errorMessage">You must be logged</span>
+            )}
           </div>
 
-          <div className="center">
-            <img className="arrowIcon" src={arrow} alt="Arrow Icon" />
+          {/* Second Block */}
+          <div className="header__sala">
+            <img src={sala} alt="Imagem Sala" />
           </div>
-        </header>
-      </div>
+        </div>
+
+        {/* <div className="center">
+          <img className="arrowIcon" src={arrow} alt="Arrow Icon" />
+        </div> */}
+      </header>
     </div>
   );
 };
