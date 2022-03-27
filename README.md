@@ -22,17 +22,17 @@ Entre cada funcionalidade que precisa ser implementada, eu a divido em pequenas 
 
 # Requisitos gerais
 
-[ ] Desenvolver o Layout (Responsivo)
+[ x ] Desenvolver o Layout (Responsivo)
 
 [ x ] Fazer os CRUDs funcionais de uma to-do List;
 
-[ ] Tornar ela operacional com drag-and-drop, eclusão, adição, etc.;
+[ x ] Tornar ela operacional com drag-and-drop, eclusão, adição, etc.;
 
 [ x ] Utilizar React e Node.js;
 
 [ x ] Trabalho adicional: fazer um login/senha para acessar a página (acesso com credenciais);
 
-[ ] Ao final do teste, me enviar por e-mail hospedado em um servidor + texto descritivo de como
+[ x ] Ao final do teste, me enviar por e-mail hospedado em um servidor + texto descritivo de como
 foi para você fazer este desafio + acesso ao repositório de arquivos.
 
 [ x ] Hospedar aplicação no HEROKU
