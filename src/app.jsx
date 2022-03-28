@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import { userContext } from "./Store/userContext";
 import Tarefas from "./Data/Tasks.json";
 import Todo from "./Pages/Todo/todo";
+import api from "./Services/api";
 
 const App = () => {
   // Authentication
@@ -19,13 +20,19 @@ const App = () => {
   const [onPage, setOnPage] = useState(false);
 
   // Tasks Data
-  const [allTasks, setAllTasks] = useState(Tarefas);
+
+  const [allTasks, setAllTasks] = useState([]);
+
+  const fetchTasks = async () => {
+    api
+      .get("/todos")
+      .then((data) => setAllTasks(data.data))
+      .catch((err) => console.error("Error:", err));
+  };
 
   useEffect(() => {
-    if (onPage === false) {
-      setAllTasks(Tarefas);
-    }
-  }, [onPage]);
+    fetchTasks();
+  }, []);
 
   // Render Order
   const renderOrder = () => {

@@ -2,26 +2,24 @@ import { useState, useContext } from "react";
 import { userContext } from "../../../Store/userContext";
 import { motion, AnimatePresence } from "framer-motion";
 import "./createModal.scss";
+import api from "../../../Services/api";
 
 const CreateModal = ({ setShowModal }) => {
   const [newTask, setNewTask] = useState();
   const { allTasks, setAllTasks } = useContext(userContext);
 
-  // Random ID
-  const randomNumber = Math.floor(Math.random() * 100);
-  const randomStringNumber = randomNumber.toString();
-
   // Storing the newTask data
-  const sendTask = () => {
-    setAllTasks([...allTasks, taskData]);
-
-    setShowModal(false);
-  };
-
-  const taskData = {
-    id: randomStringNumber,
-    name: newTask,
-    complete: false,
+  const sendTask = async () => {
+    const headers = {
+      "Content-type": "application/json",
+      accept: "application/json",
+    };
+    const body = {
+      text: newTask,
+    };
+    const data = await api.post("/todos/new", body, { headers });
+    setAllTasks([...allTasks, data.data]);
+    // setShowModal(false);
   };
 
   return (
