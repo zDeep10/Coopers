@@ -13,6 +13,7 @@ const Header = () => {
 
   // Modal State
   const [showModal, setShowModal] = useState(false);
+  const [modalName, setModalName] = useState("");
 
   // Error State
   const [errorMessage, setErrorMessage] = useState(false);
@@ -40,16 +41,43 @@ const Header = () => {
               Welcome <span>{authentication}</span>
             </h2>
           ) : (
-            <button onClick={() => setShowModal(true)}>Sign in</button>
+            <div>
+              <button
+                onClick={() => {
+                  setModalName("sign-in");
+                  setShowModal(true);
+                }}
+              >
+                Sign in
+              </button>
+              <button
+                onClick={() => {
+                  setModalName("login");
+                  setShowModal(true);
+                }}
+              >
+                Login
+              </button>
+            </div>
           )}
         </nav>
 
         {/* Modal */}
-        <Modal
-          showModal={showModal}
-          setShowModal={setShowModal}
-          setErrorMessage={setErrorMessage}
-        />
+        {modalName == "login" ? (
+          <Modal
+            name={"login"}
+            showModal={showModal}
+            setShowModal={setShowModal}
+            setErrorMessage={setErrorMessage}
+          />
+        ) : (
+          <Modal
+            name={"sign-in"}
+            showModal={showModal}
+            setShowModal={setShowModal}
+            setErrorMessage={setErrorMessage}
+          />
+        )}
 
         {/* First Block */}
         <div className="header__flex">

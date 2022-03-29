@@ -4,6 +4,7 @@ import { useState, useContext } from "react";
 import Editable from "../Editable/editable";
 import { userContext } from "../../../../Store/userContext";
 import { Draggable } from "react-beautiful-dnd";
+import api from "../../../../Services/api";
 
 const Taks = ({ tasks, name, index }) => {
   // Tasks Context
@@ -11,11 +12,13 @@ const Taks = ({ tasks, name, index }) => {
 
   const [updatedTask, setUpdatedTask] = useState("");
 
-  const completeTasks = (id) => {
-    // Todo Check
+  // Completing Task
+  const completeTasks = async (id) => {
+    const data = await api.put("todos/complete/" + id).then((res) => res.data);
+
     setAllTasks(
       allTasks.map((task) => {
-        if (task.id === id) {
+        if (task._id === data._id) {
           return { ...task, complete: !task.complete };
         } else {
           return task;
@@ -25,8 +28,10 @@ const Taks = ({ tasks, name, index }) => {
   };
 
   // Delete Task
-  const deleteTask = (id) => {
-    setAllTasks((tasks) => tasks.filter((task) => task.id !== id));
+  const deleteTask = async (id) => {
+    const data = await api.delete("todos/delete/" + id).then((res) => res.data);
+
+    setAllTasks((tasks) => tasks.filter((task) => task._id !== data._id));
   };
 
   const checkBoxType = (data) => {
@@ -39,7 +44,7 @@ const Taks = ({ tasks, name, index }) => {
   };
 
   return (
-    <Draggable key={tasks.id} draggableId={tasks.id} index={index}>
+    <Draggable key={tasks._id} draggableId={tasks._id} index={index}>
       {(provided) => (
         <li
           className="card__tasks"
@@ -50,7 +55,7 @@ const Taks = ({ tasks, name, index }) => {
           <div className="flexAdjust">
             {/* CheckBox */}
             <div
-              onClick={() => completeTasks(tasks.id)}
+              onClick={() => completeTasks(tasks._id)}
               className={`card__checkBox ${
                 name == "Done" ? "greenBorder" : ""
               } ${tasks.complete && "greyBorder"}`}
@@ -62,11 +67,12 @@ const Taks = ({ tasks, name, index }) => {
             <div className={`card__task ${tasks.complete && "activeTitle"}`}>
               <Editable
                 text={updatedTask}
-                placeholder={tasks.name}
+                placeholder={tasks.text}
                 allTasks={allTasks}
                 setAllTasks={setAllTasks}
-                id={tasks.id}
+                task={tasks}
                 type="input"
+                setUpdatedTask={setUpdatedTask}
               >
                 <input
                   type="text"
@@ -79,7 +85,7 @@ const Taks = ({ tasks, name, index }) => {
           </div>
 
           {/* Delete */}
-          <div onClick={() => deleteTask(tasks.id)} className="card__delete">
+          <div onClick={() => deleteTask(tasks._id)} className="card__delete">
             delete
           </div>
         </li>

@@ -86,20 +86,30 @@
       }
     }
 
-    button {
-      background-color: colors.$preto;
-      color: colors.$branco;
-      height: 40px;
-      width: 120px;
-      border: none;
-      font-family: typography.$poppinsFont;
-      font-weight: 600;
-      cursor: pointer;
+    div {
+      :first-child {
+        margin-right: 1rem;
 
-      @media (max-width: 730px) {
-        width: 30%;
-        height: 30px;
-        font-size: 1.4rem;
+        @media (max-width: 730px) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      button {
+        background-color: colors.$preto;
+        color: colors.$branco;
+        height: 40px;
+        width: 120px;
+        border: none;
+        font-family: typography.$poppinsFont;
+        font-weight: 600;
+        cursor: pointer;
+
+        @media (max-width: 730px) {
+          width: 100%;
+          height: 30px;
+          font-size: 1.4rem;
+        }
       }
     }
   }
