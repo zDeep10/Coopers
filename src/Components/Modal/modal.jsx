@@ -15,7 +15,7 @@ const Modal = ({ showModal, setShowModal, name }) => {
   const [userInfo, setUserInfo] = useState([]);
 
   // User Context
-  const { setAuthentication, setUser, user, setAllTasks } =
+  const { setAuthentication, setUser, setAllTasks } =
     useContext(userContext);
 
   let currentUser = {
@@ -97,7 +97,7 @@ const Modal = ({ showModal, setShowModal, name }) => {
         }
 
         if (userAuthentication) {
-          setAuthentication(isValid.user);
+          setAuthentication(userAuthentication);
           setUser(currentUser);
           // DESABILITANDO BOTÃO E APGANDO MENSAGENS DE ERRO
           setUserError(null);

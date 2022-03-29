@@ -20,7 +20,6 @@ const CreateModal = ({ setShowModal }) => {
     };
     const data = await api.post("/todos/new", body, { headers });
 
-    console.log(data.data);
     setAllTasks([...allTasks, data.data]);
 
     setShowModal(false);

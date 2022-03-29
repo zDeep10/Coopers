@@ -20,10 +20,9 @@ const Todo = () => {
         <button
           onClick={() => {
             setOnPage(false);
-            setAuthentication(false);
           }}
         >
-          Sign off
+          Home Page
         </button>
       </nav>
 

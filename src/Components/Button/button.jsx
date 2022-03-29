@@ -4,15 +4,18 @@ import { userContext } from "../../Store/userContext";
 import api from "../../Services/api";
 
 const Button = ({ name }) => {
-  const { allTasks, setAllTasks } = useContext(userContext);
+  const { allTasks, setAllTasks, user, authentication } =
+    useContext(userContext);
 
   const eraseAll = async () => {
-    if (name === "Done") {
-      await api.delete("/deleteAll/done");
-    }
+    if (authentication) {
+      if (name === "Done") {
+        await api.delete("/deleteAll/done/" + user._id);
+      }
 
-    if (name === "To-do") {
-      await api.delete("/deleteAll/todo");
+      if (name === "To-do") {
+        await api.delete("/deleteAll/todo/" + user._id);
+      }
     }
 
     setAllTasks(

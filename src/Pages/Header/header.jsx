@@ -9,7 +9,7 @@ import { userContext } from "../../Store/userContext";
 
 const Header = () => {
   // Turn page State
-  const { setOnPage, authentication } = useContext(userContext);
+  const { setOnPage, authentication, user } = useContext(userContext);
 
   // Modal State
   const [showModal, setShowModal] = useState(false);
@@ -38,7 +38,7 @@ const Header = () => {
 
           {authentication ? (
             <h2 className="authentication">
-              Welcome <span>{authentication}</span>
+              Welcome <span>{user.name}</span>
             </h2>
           ) : (
             <div>
