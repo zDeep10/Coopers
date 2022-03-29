@@ -1,71 +1,71 @@
 [
   {
-    "id": "1",
+    "_id": "1",
     "name": "Get FTP credentials",
     "complete": true
   },
   {
-    "id": "2",
+    "_id": "2",
     "name": "Home Page Design ",
     "complete": true
   },
   {
-    "id": "3",
+    "_id": "3",
     "name": "E-mail John about the deadline",
     "complete": true
   },
   {
-    "id": "4",
+    "_id": "4",
     "name": "Create a Google Drive folder",
     "complete": true
   },
   {
-    "id": "5",
+    "_id": "5",
     "name": "Send a gift to the client",
     "complete": true
   },
   {
-    "id": "6",
+    "_id": "6",
     "name": "this is a new task",
     "complete": false
   },
   {
-    "id": "7",
+    "_id": "7",
     "name": "Develop the To-do list page",
     "complete": false
   },
   {
-    "id": "8",
+    "_id": "8",
     "name": "Create the drag-and-drop function",
     "complete": false
   },
   {
-    "id": "9",
+    "_id": "9",
     "name": "Add new tasks",
     "complete": false
   },
   {
-    "id": "10",
+    "_id": "10",
     "name": "Delete itens",
     "complete": false
   },
   {
-    "id": "11",
+    "_id": "11",
     "name": "Erase all",
     "complete": false
   },
   {
-    "id": "12",
+    "_id": "12",
     "name": "Checked item goes to Done list",
     "complete": false
   },
   {
-    "id": "13",
+    "_id": "13",
     "name": "This item label may be edited",
     "complete": false
   },
   {
-    "id": "14",
+    "_id": "14",
     "name": "Editing an item...",
     "complete": false
   }

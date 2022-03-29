@@ -7,7 +7,6 @@ import "./styles/global.scss";
 import bg from "/img/BG.png";
 import { useState, useEffect } from "react";
 import { userContext } from "./Store/userContext";
-import Tarefas from "./Data/Tasks.json";
 import Todo from "./Pages/Todo/todo";
 import api from "./Services/api";
 
@@ -15,24 +14,13 @@ const App = () => {
   // Authentication
   const [authentication, setAuthentication] = useState("");
 
-  // Show Todo Page
+  const [user, setUser] = useState([]);
 
+  // Show Todo Page
   const [onPage, setOnPage] = useState(false);
 
   // Tasks Data
-
   const [allTasks, setAllTasks] = useState([]);
-
-  const fetchTasks = async () => {
-    api
-      .get("/todos")
-      .then((data) => setAllTasks(data.data))
-      .catch((err) => console.error("Error:", err));
-  };
-
-  useEffect(() => {
-    fetchTasks();
-  }, []);
 
   // Render Order
   const renderOrder = () => {
@@ -76,6 +64,8 @@ const App = () => {
         setAllTasks,
         onPage,
         setOnPage,
+        user,
+        setUser,
       }}
     >
       <div className="main__container">{renderOrder()} </div>

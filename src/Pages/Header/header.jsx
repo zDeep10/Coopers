@@ -91,7 +91,7 @@ const Header = () => {
 
             <button onClick={pageCall}>Go to To-do list</button>
             {errorMessage && (
-              <span className="errorMessage">You must be logged</span>
+              <span className="errorMessage">You must be logged in</span>
             )}
           </div>
 

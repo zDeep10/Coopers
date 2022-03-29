@@ -6,7 +6,7 @@ import api from "../../../Services/api";
 
 const CreateModal = ({ setShowModal }) => {
   const [newTask, setNewTask] = useState();
-  const { allTasks, setAllTasks } = useContext(userContext);
+  const { allTasks, setAllTasks, user } = useContext(userContext);
 
   // Storing the newTask data
   const sendTask = async () => {
@@ -16,10 +16,13 @@ const CreateModal = ({ setShowModal }) => {
     };
     const body = {
       text: newTask,
+      userID: user._id,
     };
     const data = await api.post("/todos/new", body, { headers });
+
+    console.log(data.data);
     setAllTasks([...allTasks, data.data]);
-    
+
     setShowModal(false);
   };
 

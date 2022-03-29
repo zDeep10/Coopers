@@ -15,7 +15,14 @@ const Modal = ({ showModal, setShowModal, name }) => {
   const [userInfo, setUserInfo] = useState([]);
 
   // User Context
-  const { setAuthentication } = useContext(userContext);
+  const { setAuthentication, setUser, user, setAllTasks } =
+    useContext(userContext);
+
+  let currentUser = {
+    name: "",
+    password: "",
+    userID: "",
+  };
 
   // SEARCHING FOR USERS DATA
 
@@ -63,7 +70,7 @@ const Modal = ({ showModal, setShowModal, name }) => {
 
           api.post("/users/new", body, { headers });
 
-          // DESABILITANDO BOTÃO E APGANDO MENSAGENS DE ERRO
+          // DESABILITANDO BOTÃO E APaGANDO MENSAGENS DE ERRO
           setUserError(null);
           setPasswordError(null);
           setShowModal(false);
@@ -79,6 +86,11 @@ const Modal = ({ showModal, setShowModal, name }) => {
             isValid.user === userInfo[i].user &&
             userInfo[i].password === isValid.password
           ) {
+            currentUser = {
+              _id: userInfo[i]._id,
+              name: userInfo[i].user,
+              password: userInfo[i].password,
+            };
             userAuthentication = true;
             break;
           }
@@ -86,11 +98,16 @@ const Modal = ({ showModal, setShowModal, name }) => {
 
         if (userAuthentication) {
           setAuthentication(isValid.user);
-
+          setUser(currentUser);
           // DESABILITANDO BOTÃO E APGANDO MENSAGENS DE ERRO
           setUserError(null);
           setPasswordError(null);
           setShowModal(false);
+
+          api
+            .get("todos/" + currentUser._id)
+            .then((data) => setAllTasks(data.data))
+            .catch((err) => console.error("Error:", err));
         } else {
           setUserError("Invalid email or password");
           setPasswordError("Invalid email or password");
