@@ -6,7 +6,6 @@ import Modal from "../../Components/Modal/modal";
 import { useState } from "react";
 import { useContext } from "react";
 import { userContext } from "../../Store/userContext";
-import api from "../../Services/api";
 
 const Header = () => {
   // Turn page State
@@ -37,6 +36,7 @@ const Header = () => {
     }
   };
 
+  // Sign out from the page
   const handleSignOut = () => {
     setAuthentication(false);
     setUser({});
@@ -52,7 +52,7 @@ const Header = () => {
           <img src={logo} alt="Logo Coopers" />
 
           {authentication ? (
-            <div>
+            <div className="loggedIN">
               <h2 className="authentication">
                 Welcome <span>{user.name}</span>
               </h2>

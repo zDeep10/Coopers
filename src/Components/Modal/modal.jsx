@@ -15,8 +15,7 @@ const Modal = ({ showModal, setShowModal, name, setErrorMessage }) => {
   const [userInfo, setUserInfo] = useState([]);
 
   // User Context
-  const { setAuthentication, setUser, setAllTasks, user } =
-    useContext(userContext);
+  const { setAuthentication, setUser, setAllTasks } = useContext(userContext);
 
   let currentUser = {
     name: "",
