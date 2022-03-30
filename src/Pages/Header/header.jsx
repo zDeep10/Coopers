@@ -63,16 +63,16 @@ const Header = () => {
         </nav>
 
         {/* Modal */}
-        {modalName == "login" ? (
+        {modalName == "sign-in" ? (
           <Modal
-            name={"login"}
+            name={"sign-in"}
             showModal={showModal}
             setShowModal={setShowModal}
             setErrorMessage={setErrorMessage}
           />
         ) : (
           <Modal
-            name={"sign-in"}
+            name={"sign-up"}
             showModal={showModal}
             setShowModal={setShowModal}
             setErrorMessage={setErrorMessage}
