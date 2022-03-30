@@ -97,6 +97,12 @@ const Modal = ({ showModal, setShowModal, name, setErrorMessage }) => {
         }
 
         if (userAuthentication) {
+          // Get user Tasks
+          api
+            .get("todos/" + currentUser._id)
+            .then((data) => setAllTasks(data.data))
+            .catch((err) => console.error("Error:", err));
+
           setAuthentication(true);
           setUser(currentUser);
           // DESABILITANDO BOTÃO E APGANDO MENSAGENS DE ERRO
@@ -107,12 +113,6 @@ const Modal = ({ showModal, setShowModal, name, setErrorMessage }) => {
 
           // Storing the current user in the localStorage
           localStorage.setItem("user", JSON.stringify(currentUser));
-
-          // Get user Tasks
-          api
-            .get("todos/" + currentUser._id)
-            .then((data) => setAllTasks(data.data))
-            .catch((err) => console.error("Error:", err));
         } else {
           setUserError("Invalid email or password");
           setPasswordError("Invalid email or password");
