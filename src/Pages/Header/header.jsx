@@ -48,7 +48,7 @@ const Header = () => {
                   setShowModal(true);
                 }}
               >
-                Sign in
+                Sign up
               </button>
               <button
                 onClick={() => {
@@ -56,7 +56,7 @@ const Header = () => {
                   setShowModal(true);
                 }}
               >
-                Login
+                Sign in
               </button>
             </div>
           )}
