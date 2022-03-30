@@ -47,7 +47,7 @@ const Modal = ({ showModal, setShowModal, name }) => {
       const isValid = await userSchema.validate(formData);
 
       // SIGN IN MODAL
-      if (name === "sign-in") {
+      if (name === "sign-up") {
         userAuthentication = false;
 
         for (let i = 0; i < userInfo.length; i++) {
@@ -78,7 +78,7 @@ const Modal = ({ showModal, setShowModal, name }) => {
       }
 
       // login MODAL
-      if (name === "login") {
+      if (name === "sign-in") {
         userAuthentication = false;
 
         for (let i = 0; i < userInfo.length; i++) {
@@ -167,14 +167,14 @@ const Modal = ({ showModal, setShowModal, name }) => {
             </div>
             {/* Modal Header */}
             <div className="modal__header">
-              {name === "login" ? (
+              {name === "sign-in" ? (
                 <h1>
-                  Login <br />
+                  Sign in <br />
                   <span>to access your list</span>
                 </h1>
               ) : (
                 <h1>
-                  Sign in <br />
+                  Sign up <br />
                   <span>to access your list</span>
                 </h1>
               )}
@@ -190,7 +190,7 @@ const Modal = ({ showModal, setShowModal, name }) => {
               <input type="password" name="password" />
               {passwordError && <span className="error">{passwordError}</span>}
 
-              <button>{name === "login" ? "Login" : "Sign in"}</button>
+              <button>{name === "sign-in" ? "Sign in" : "Sign up"}</button>
             </form>
           </motion.div>
         </div>

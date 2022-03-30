@@ -44,7 +44,7 @@ const Header = () => {
             <div>
               <button
                 onClick={() => {
-                  setModalName("sign-in");
+                  setModalName("sign-up");
                   setShowModal(true);
                 }}
               >
@@ -52,7 +52,7 @@ const Header = () => {
               </button>
               <button
                 onClick={() => {
-                  setModalName("login");
+                  setModalName("sign-in");
                   setShowModal(true);
                 }}
               >
