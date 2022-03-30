@@ -45,7 +45,7 @@ const App = () => {
 
   useEffect(() => {
     callTasks();
-  }, [authentication]);
+  }, [user]);
 
   // Render Order
   const renderOrder = () => {
