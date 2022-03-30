@@ -6,10 +6,18 @@ import Modal from "../../Components/Modal/modal";
 import { useState } from "react";
 import { useContext } from "react";
 import { userContext } from "../../Store/userContext";
+import api from "../../Services/api";
 
 const Header = () => {
   // Turn page State
-  const { setOnPage, authentication, user } = useContext(userContext);
+  const {
+    setOnPage,
+    setAuthentication,
+    authentication,
+    user,
+    setUser,
+    setAllTasks,
+  } = useContext(userContext);
 
   // Modal State
   const [showModal, setShowModal] = useState(false);
@@ -29,6 +37,13 @@ const Header = () => {
     }
   };
 
+  const handleSignOut = () => {
+    setAuthentication(false);
+    setUser({});
+    localStorage.clear();
+    setAllTasks([]);
+  };
+
   return (
     <div className="main__grid">
       <header className="header__container">
@@ -37,9 +52,13 @@ const Header = () => {
           <img src={logo} alt="Logo Coopers" />
 
           {authentication ? (
-            <h2 className="authentication">
-              Welcome <span>{user.name}</span>
-            </h2>
+            <div>
+              <h2 className="authentication">
+                Welcome <span>{user.name}</span>
+              </h2>
+
+              <button onClick={handleSignOut}>Sign out</button>
+            </div>
           ) : (
             <div>
               <button

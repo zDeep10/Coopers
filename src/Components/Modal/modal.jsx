@@ -6,16 +6,16 @@ import { useState, useContext, useEffect } from "react";
 import { userContext } from "../../Store/userContext";
 import api from "../../Services/api";
 
-const Modal = ({ showModal, setShowModal, name }) => {
+const Modal = ({ showModal, setShowModal, name, setErrorMessage }) => {
   // States for handling erros
   const [passwordError, setPasswordError] = useState(null);
   const [userError, setUserError] = useState(null);
 
-  // STATE PARA ARMAZENAR USUARIOS JÁ CADASTRADOS
+  // State that stores already registered users
   const [userInfo, setUserInfo] = useState([]);
 
   // User Context
-  const { setAuthentication, setUser, setAllTasks } =
+  const { setAuthentication, setUser, setAllTasks, user } =
     useContext(userContext);
 
   let currentUser = {
@@ -74,6 +74,7 @@ const Modal = ({ showModal, setShowModal, name }) => {
           setUserError(null);
           setPasswordError(null);
           setShowModal(false);
+          setErrorMessage(null);
         }
       }
 
@@ -97,13 +98,18 @@ const Modal = ({ showModal, setShowModal, name }) => {
         }
 
         if (userAuthentication) {
-          setAuthentication(userAuthentication);
+          setAuthentication(true);
           setUser(currentUser);
           // DESABILITANDO BOTÃO E APGANDO MENSAGENS DE ERRO
           setUserError(null);
           setPasswordError(null);
           setShowModal(false);
+          setErrorMessage(null);
 
+          // Storing the current user in the localStorage
+          localStorage.setItem("user", JSON.stringify(currentUser));
+
+          // Get user Tasks
           api
             .get("todos/" + currentUser._id)
             .then((data) => setAllTasks(data.data))

@@ -22,6 +22,31 @@ const App = () => {
   // Tasks Data
   const [allTasks, setAllTasks] = useState([]);
 
+  // Checking if the user is loggedIn
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setUser(foundUser);
+      setAuthentication(true);
+    }
+  }, []);
+
+  // Get current user Tasks
+  const callTasks = () => {
+    if (authentication) {
+      api
+        .get("todos/" + user._id)
+        .then((data) => setAllTasks(data.data))
+        .catch((err) => console.error("Error:", err));
+    }
+  };
+
+  useEffect(() => {
+    callTasks();
+  }, [authentication]);
+
   // Render Order
   const renderOrder = () => {
     if (onPage === false) {
